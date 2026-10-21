@@ -1,0 +1,192 @@
+[
+  {
+    "nombre": "B01 Catálogo inicial",
+    "correcto": true,
+    "detalle": "12 tarjetas, incluidos dos productos sin stock"
+  },
+  {
+    "nombre": "B02 Búsqueda sin tildes",
+    "correcto": true,
+    "detalle": "JABON encuentra Jabón"
+  },
+  {
+    "nombre": "B03 Filtro sin resultados",
+    "correcto": true,
+    "detalle": "Mensaje sin resultados"
+  },
+  {
+    "nombre": "B04 Categoría y limpieza",
+    "correcto": true,
+    "detalle": "Tres lácteos"
+  },
+  {
+    "nombre": "B05 Restauración de filtros",
+    "correcto": true,
+    "detalle": "Vuelven los 12 productos"
+  },
+  {
+    "nombre": "B06 Sucursales activas",
+    "correcto": true,
+    "detalle": "Tres activas; inactiva oculta"
+  },
+  {
+    "nombre": "B07 SPA e indicador activo",
+    "correcto": true,
+    "detalle": "Sin reconexión de documento; foco conservado en enlace y ruta activa correcta"
+  },
+  {
+    "nombre": "B08 Atrás",
+    "correcto": true,
+    "detalle": "Vuelve a tiendas"
+  },
+  {
+    "nombre": "B09 Adelante",
+    "correcto": true,
+    "detalle": "Vuelve a contacto"
+  },
+  {
+    "nombre": "B10 Formulario vacío y foco",
+    "correcto": true,
+    "detalle": "Cuatro errores y foco en nombre"
+  },
+  {
+    "nombre": "B11 Email inválido y asunto en blanco",
+    "correcto": true,
+    "detalle": "Errores de email y asunto"
+  },
+  {
+    "nombre": "B12 Validación demostrativa",
+    "correcto": true,
+    "detalle": "Sin promesa de envío; sin navegación"
+  },
+  {
+    "nombre": "B13 Edición elimina éxito anterior",
+    "correcto": true,
+    "detalle": "Se invalida la confirmación previa al editar"
+  },
+  {
+    "nombre": "B14 Teclado del formulario",
+    "correcto": true,
+    "detalle": "Tab avanza de nombre a correo"
+  },
+  {
+    "nombre": "B15 Ruta comodín sin selección incorrecta",
+    "correcto": true,
+    "detalle": "404 anidada sin marcar Contacto"
+  },
+  {
+    "nombre": "B16 Retorno desde 404",
+    "correcto": true,
+    "detalle": "Retorna a Home"
+  },
+  {
+    "nombre": "B17 Acceso directo y recarga /",
+    "correcto": true,
+    "detalle": "El inventario, a la vista"
+  },
+  {
+    "nombre": "B17 Acceso directo y recarga /nuestras-tiendas",
+    "correcto": true,
+    "detalle": "Un espacio para cada comunidad"
+  },
+  {
+    "nombre": "B17 Acceso directo y recarga /contactanos",
+    "correcto": true,
+    "detalle": "Estamos para ayudarte"
+  },
+  {
+    "nombre": "B18 Salto al contenido por teclado",
+    "correcto": true,
+    "detalle": "Foco en main"
+  },
+  {
+    "nombre": "B19 Catálogo JSON vacío",
+    "correcto": true,
+    "detalle": "Estado vacío sin excepción"
+  },
+  {
+    "nombre": "B20 Producto con precio inválido",
+    "correcto": true,
+    "detalle": "Error visible, no tarjetas inválidas"
+  },
+  {
+    "nombre": "B21 Estado de carga",
+    "correcto": true,
+    "detalle": "Observado Cargando productos… al navegar durante B19"
+  },
+  {
+    "nombre": "B22 JSON con sintaxis inválida",
+    "correcto": true,
+    "detalle": "Error controlado de JSON"
+  },
+  {
+    "nombre": "B23 Cero sucursales activas",
+    "correcto": true,
+    "detalle": "Mensaje de ausencia de activas"
+  },
+  {
+    "nombre": "B24 JSON de sucursales vacío",
+    "correcto": true,
+    "detalle": "Mensaje de lista vacía"
+  },
+  {
+    "nombre": "B25 Error HTTP de productos",
+    "correcto": true,
+    "detalle": "Archivo ausente solicitado como application/json"
+  },
+  {
+    "nombre": "B26 Error HTTP de sucursales",
+    "correcto": true,
+    "detalle": "Error controlado con JSON ausente"
+  },
+  {
+    "nombre": "B27 Sucursal inválida",
+    "correcto": true,
+    "detalle": "Se rechaza activa como texto"
+  },
+  {
+    "nombre": "B28 Adaptación 375 px /nuestras-tiendas",
+    "correcto": true,
+    "detalle": "{\"ancho\":360,\"contenido\":360,\"final\":756,\"menu\":783}"
+  },
+  {
+    "nombre": "B28 Adaptación 375 px /contactanos",
+    "correcto": true,
+    "detalle": "{\"ancho\":360,\"contenido\":360,\"final\":736,\"menu\":783}"
+  },
+  {
+    "nombre": "B28 Adaptación 375 px /",
+    "correcto": true,
+    "detalle": "{\"ancho\":360,\"contenido\":360,\"final\":756,\"menu\":783}"
+  },
+  {
+    "nombre": "B28 Adaptación 768 px /nuestras-tiendas",
+    "correcto": true,
+    "detalle": "{\"ancho\":753,\"contenido\":753,\"final\":755,\"menu\":787}"
+  },
+  {
+    "nombre": "B28 Adaptación 768 px /contactanos",
+    "correcto": true,
+    "detalle": "{\"ancho\":753,\"contenido\":753,\"final\":725,\"menu\":787}"
+  },
+  {
+    "nombre": "B28 Adaptación 768 px /",
+    "correcto": true,
+    "detalle": "{\"ancho\":753,\"contenido\":753,\"final\":755,\"menu\":787}"
+  },
+  {
+    "nombre": "B28 Adaptación 1366 px /nuestras-tiendas",
+    "correcto": true,
+    "detalle": "{\"ancho\":1351,\"contenido\":1351,\"final\":755,\"menu\":787}"
+  },
+  {
+    "nombre": "B28 Adaptación 1366 px /contactanos",
+    "correcto": true,
+    "detalle": "{\"ancho\":1351,\"contenido\":1351,\"final\":707,\"menu\":787}"
+  },
+  {
+    "nombre": "B28 Adaptación 1366 px /",
+    "correcto": true,
+    "detalle": "{\"ancho\":1351,\"contenido\":1351,\"final\":756,\"menu\":787}"
+  }
+]
