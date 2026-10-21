@@ -1,6 +1,7 @@
 # Informe de implementación — Semana 1
 
-**PFY2202 · Desarrollo Frontend II · Experiencia 1 · Forma B**  
+**PFY2202 · Desarrollo Frontend II · Experiencia 1 · Forma B**
+
 Proyecto: **Aula Verde**, supermercado ficticio. Fecha: **21 de octubre de 2026**, America/Santiago.
 
 ## A. Resultado y alcance
@@ -108,6 +109,7 @@ Las 14 pruebas unitarias pueden repetirse con `npm test`; los 38 escenarios asis
 - Rama: `main`.
 - Primer commit: `bd77a67` — «Implementa catálogo, sucursales y contacto demostrativo con navegación SPA».
 - Segundo commit documental: «Documenta validaciones y prepara revisión de Semana 1». Este informe forma parte de ese commit; su identificador se consulta mediante `git log -2 --oneline`.
+- Ajuste documental final: «Normaliza formato de la documentación», para eliminar espacios finales de Markdown detectados por Git. El historial completo se consulta con `git log --oneline`.
 - El cierre exige `git status --porcelain` vacío después del commit documental.
 - `git remote -v` no registra remotos. No se creó GitHub ni se ejecutó push.
 - `.gitignore` excluye dependencias, producción y archivos locales. No se añaden secretos ni archivos personales.

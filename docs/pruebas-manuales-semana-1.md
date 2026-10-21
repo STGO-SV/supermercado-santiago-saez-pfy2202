@@ -1,6 +1,7 @@
 # Protocolo de pruebas manuales — Semana 1
 
-PFY2202 · Experiencia 1 · Forma B · Aula Verde  
+PFY2202 · Experiencia 1 · Forma B · Aula Verde
+
 Preparado el 21 de octubre de 2026. **18 pruebas propuestas; ninguna ejecutada todavía por el usuario.**
 
 ## Preparación
