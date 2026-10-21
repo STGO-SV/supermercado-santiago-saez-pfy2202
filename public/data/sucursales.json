@@ -1,0 +1,34 @@
+[
+  {
+    "id": "s01",
+    "nombre": "Aula Verde — Ñuñoa",
+    "comuna": "Ñuñoa",
+    "direccion": "Pasaje Demostración Aula 101 (dirección ficticia)",
+    "horario": "Lunes a sábado, 09:00 a 20:00",
+    "activa": true
+  },
+  {
+    "id": "s02",
+    "nombre": "Aula Verde — Maipú",
+    "comuna": "Maipú",
+    "direccion": "Calle Ejemplo Académico 202 (dirección ficticia)",
+    "horario": "Lunes a domingo, 10:00 a 19:00",
+    "activa": true
+  },
+  {
+    "id": "s03",
+    "nombre": "Aula Verde — La Florida",
+    "comuna": "La Florida",
+    "direccion": "Pasaje Práctica Frontend 303 (dirección ficticia)",
+    "horario": "Lunes a sábado, 08:30 a 20:30",
+    "activa": true
+  },
+  {
+    "id": "s04",
+    "nombre": "Aula Verde — Puente Alto",
+    "comuna": "Puente Alto",
+    "direccion": "Calle Sucursal de Prueba 404 (dirección ficticia)",
+    "horario": "Sin atención al público",
+    "activa": false
+  }
+]

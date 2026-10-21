@@ -1,0 +1,98 @@
+[
+  {
+    "id": "p01",
+    "nombre": "Arroz grano largo 1 kg",
+    "categoria": "Abarrotes",
+    "precio": 1490,
+    "stock": 42,
+    "disponible": true
+  },
+  {
+    "id": "p02",
+    "nombre": "Fideos espirales 400 g",
+    "categoria": "Abarrotes",
+    "precio": 990,
+    "stock": 35,
+    "disponible": true
+  },
+  {
+    "id": "p03",
+    "nombre": "Lentejas 1 kg",
+    "categoria": "Abarrotes",
+    "precio": 2290,
+    "stock": 18,
+    "disponible": true
+  },
+  {
+    "id": "p04",
+    "nombre": "Leche semidescremada 1 L",
+    "categoria": "Lácteos",
+    "precio": 1190,
+    "stock": 24,
+    "disponible": true
+  },
+  {
+    "id": "p05",
+    "nombre": "Yogur natural 125 g",
+    "categoria": "Lácteos",
+    "precio": 490,
+    "stock": 0,
+    "disponible": false
+  },
+  {
+    "id": "p06",
+    "nombre": "Queso laminado 250 g",
+    "categoria": "Lácteos",
+    "precio": 3290,
+    "stock": 12,
+    "disponible": true
+  },
+  {
+    "id": "p07",
+    "nombre": "Agua sin gas 1,5 L",
+    "categoria": "Bebidas",
+    "precio": 890,
+    "stock": 30,
+    "disponible": true
+  },
+  {
+    "id": "p08",
+    "nombre": "Jugo de naranja 1 L",
+    "categoria": "Bebidas",
+    "precio": 1590,
+    "stock": 16,
+    "disponible": true
+  },
+  {
+    "id": "p09",
+    "nombre": "Detergente líquido 1 L",
+    "categoria": "Limpieza",
+    "precio": 3990,
+    "stock": 20,
+    "disponible": true
+  },
+  {
+    "id": "p10",
+    "nombre": "Lavalozas 750 ml",
+    "categoria": "Limpieza",
+    "precio": 1890,
+    "stock": 0,
+    "disponible": false
+  },
+  {
+    "id": "p11",
+    "nombre": "Jabón de manos 250 ml",
+    "categoria": "Higiene",
+    "precio": 1690,
+    "stock": 25,
+    "disponible": true
+  },
+  {
+    "id": "p12",
+    "nombre": "Pasta dental 90 g",
+    "categoria": "Higiene",
+    "precio": 1990,
+    "stock": 14,
+    "disponible": true
+  }
+]
