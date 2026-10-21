@@ -110,7 +110,9 @@ Las 14 pruebas unitarias pueden repetirse con `npm test`; los 38 escenarios asis
 - Primer commit: `bd77a67` — «Implementa catálogo, sucursales y contacto demostrativo con navegación SPA».
 - Segundo commit documental: «Documenta validaciones y prepara revisión de Semana 1». Este informe forma parte de ese commit; su identificador se consulta mediante `git log -2 --oneline`.
 - Ajuste documental final: «Normaliza formato de la documentación», para eliminar espacios finales de Markdown detectados por Git. El historial completo se consulta con `git log --oneline`.
+- Registro operativo final: «Registra comprobaciones de cierre e hibernación».
 - El cierre exige `git status --porcelain` vacío después del commit documental.
+- El estado se comprobó limpio tras los commits de implementación y documentación; se vuelve a comprobar tras el registro operativo final.
 - `git remote -v` no registra remotos. No se creó GitHub ni se ejecutó push.
 - `.gitignore` excluye dependencias, producción y archivos locales. No se añaden secretos ni archivos personales.
 - No se creó ZIP definitivo ni se publicó el trabajo.
@@ -142,3 +144,5 @@ La autorización anticipada fue dada en el encargo integrado. Antes de desarroll
 Antes de solicitar hibernación se verifican los archivos guardados, los commits, el estado limpio y el fin de pruebas/instalaciones/escrituras. Se detiene el servidor de desarrollo iniciado por el agente. Se vuelve a consultar la disponibilidad y solicitudes de energía. No se ejecuta apagado, reinicio, cierre de sesión ni hibernación forzada.
 
 **Este documento se guarda antes de la solicitud final. No certifica que el equipo ya haya hibernado:** la transición solo puede producirse después y depende de que Windows acepte la solicitud. La hibernación será la última operación; si Windows o la revisión de permisos la rechazan, no se fuerza.
+
+Comprobación operativa final: servidor de desarrollo detenido, comandos de pruebas e instalaciones terminados, consultas de procesos sin Git ni procesos Node/npm del proyecto en ejecución. Los dos informes existen y tienen contenido. Windows sigue indicando hibernación disponible. `powercfg /requests` no pudo consultar los bloqueos de energía porque la sesión no dispone de privilegios de administrador, incluso al ejecutarlo fuera del aislamiento; no se solicitó elevación interactiva ni se modificaron opciones de energía. No se detectó una operación propia pendiente de escritura ni otro riesgo concreto de pérdida de datos. Se solicitará hibernación normal, sin forzar, mediante `shutdown.exe /h`. Al volver, el servidor se inicia con el comando del README.
