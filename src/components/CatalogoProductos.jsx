@@ -21,7 +21,7 @@ function CatalogoProductos({ productos, cargando, error }) {
     <section aria-labelledby="titulo-catalogo" className="catalog-section">
       <div className="section-heading">
         <h2 id="titulo-catalogo">Catálogo de inventario</h2>
-        <p>Consulta los productos y sus existencias de demostración.</p>
+        <p>Demostración - Consulta de productos y sus existencias.</p>
       </div>
       {cargando ? (
         <p role="status" className="notice">

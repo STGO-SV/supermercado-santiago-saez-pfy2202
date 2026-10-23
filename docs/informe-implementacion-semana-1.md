@@ -2,7 +2,7 @@
 
 **PFY2202 · Desarrollo Frontend II · Experiencia 1 · Forma B**
 
-Proyecto: **Aula Verde**, supermercado ficticio. Implementación: **21 de octubre de 2026**. Cierre: **22 de octubre de 2026**, America/Santiago.
+Proyecto: **Despensa Verde**, supermercado ficticio. Implementación: **21 de octubre de 2026**. Cierre: **22 de octubre de 2026**, America/Santiago.
 
 ## A. Resultado y alcance
 
@@ -42,12 +42,12 @@ No se instalaron dependencias nuevas en esta etapa. Continúan React/React DOM 1
 
 ## B. Funcionalidad
 
-| Ruta                | Comportamiento                                                                                                                                                                |
-| ------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/`                 | Presentación de Aula Verde y 12 productos en cinco categorías, búsqueda por nombre/categoría sin distinguir tildes o mayúsculas, selector de categoría y limpieza de filtros. |
-| `/nuestras-tiendas` | Tres sucursales activas de cuatro registros. La inactiva permanece en el JSON y no se muestra. Direcciones claramente ficticias.                                              |
-| `/contactanos`      | Nombre, correo, asunto y mensaje obligatorios. Rechaza campos vacíos/espacios y formato de correo inválido. Informa que no se ha enviado ningún mensaje.                      |
-| `*`                 | Página 404 y enlace SPA al inicio; el menú no marca una ruta equivocada, incluso en una dirección anidada inexistente.                                                        |
+| Ruta                | Comportamiento                                                                                                                                                                    |
+| ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/`                 | Presentación de Despensa Verde y 12 productos en cinco categorías, búsqueda por nombre/categoría sin distinguir tildes o mayúsculas, selector de categoría y limpieza de filtros. |
+| `/nuestras-tiendas` | Tres sucursales activas de cuatro registros. La inactiva permanece en el JSON y no se muestra. Direcciones claramente ficticias.                                                  |
+| `/contactanos`      | Nombre, correo, asunto y mensaje obligatorios. Rechaza campos vacíos/espacios y formato de correo inválido. Informa que no se ha enviado ningún mensaje.                          |
+| `*`                 | Página 404 y enlace SPA al inicio; el menú no marca una ruta equivocada, incluso en una dirección anidada inexistente.                                                            |
 
 Los JSON se solicitan mediante `fetch()` con `import.meta.env.BASE_URL` y Accept application/json. Se verifican respuesta HTTP, lista, campos requeridos, IDs únicos, enteros seguros no negativos y estados booleanos. La disponibilidad debe coincidir con stock > 0. Un conjunto inválido se rechaza entero, sin mostrar registros parcialmente incorrectos.
 

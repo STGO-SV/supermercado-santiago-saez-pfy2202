@@ -1,33 +1,33 @@
 [
   {
     "id": "s01",
-    "nombre": "Aula Verde — Ñuñoa",
+    "nombre": "Despensa Verde — Ñuñoa",
     "comuna": "Ñuñoa",
-    "direccion": "Pasaje Demostración Aula 101 (dirección ficticia)",
-    "horario": "Lunes a sábado, 09:00 a 20:00",
+    "direccion": "Avenida Alfa 101",
+    "horario": "Lunes a domingo, 09:00 a 21:00",
     "activa": true
   },
   {
     "id": "s02",
-    "nombre": "Aula Verde — Maipú",
+    "nombre": "Despensa Verde — Maipú",
     "comuna": "Maipú",
-    "direccion": "Calle Ejemplo Académico 202 (dirección ficticia)",
+    "direccion": "Calle Beta 202",
     "horario": "Lunes a domingo, 10:00 a 19:00",
     "activa": true
   },
   {
     "id": "s03",
-    "nombre": "Aula Verde — La Florida",
+    "nombre": "Despensa Verde — La Florida",
     "comuna": "La Florida",
-    "direccion": "Pasaje Práctica Frontend 303 (dirección ficticia)",
+    "direccion": "Avenida Gamma 303",
     "horario": "Lunes a sábado, 08:30 a 20:30",
     "activa": true
   },
   {
     "id": "s04",
-    "nombre": "Aula Verde — Puente Alto",
+    "nombre": "Despensa Verde — Puente Alto",
     "comuna": "Puente Alto",
-    "direccion": "Calle Sucursal de Prueba 404 (dirección ficticia)",
+    "direccion": "Calle Delta 404",
     "horario": "Sin atención al público",
     "activa": false
   }

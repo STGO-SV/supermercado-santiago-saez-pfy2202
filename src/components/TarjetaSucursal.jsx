@@ -8,7 +8,7 @@ function TarjetaSucursal({ sucursal }) {
       <h2 id={`sucursal-${sucursal.id}`}>{sucursal.nombre}</h2>
       <dl>
         <div>
-          <dt>Dirección demostrativa</dt>
+          <dt>Dirección</dt>
           <dd>{sucursal.direccion}</dd>
         </div>
         <div>

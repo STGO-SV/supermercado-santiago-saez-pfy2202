@@ -33,8 +33,9 @@ function FormularioContacto() {
       aria-describedby="ayuda-contacto"
     >
       <p id="ayuda-contacto" className="notice">
-        Formulario demostrativo: valida tus datos, pero no envía mensajes a un
-        servidor ni guarda tu información. Todos los campos son obligatorios.
+        Este es un formulario demostrativo: valida los datos, pero no envía
+        mensajes a un servidor ni guarda la información. Todos los campos son
+        obligatorios.
       </p>
       {[
         { name: 'nombre', label: 'Nombre', type: 'text', autoComplete: 'name' },

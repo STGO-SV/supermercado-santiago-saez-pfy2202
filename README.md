@@ -1,4 +1,4 @@
-# Aula Verde — Supermercado
+# Despensa Verde — Supermercado
 
 Proyecto académico de **Desarrollo Frontend II (PFY2202), Experiencia 1, Semana 1, Forma B**.
 

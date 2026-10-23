@@ -8,7 +8,7 @@ function MainLayout() {
       </a>
       <header className="site-header">
         <div className="container">
-          <p className="site-brand">Aula Verde</p>
+          <p className="site-brand">Despensa Verde</p>
           <p className="site-tagline">Gestión de inventario</p>
         </div>
       </header>

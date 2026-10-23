@@ -8,11 +8,13 @@ function NuestrasTiendas() {
     <>
       <section className="page-panel" aria-labelledby="titulo-tiendas">
         <p className="eyebrow">Nuestras tiendas</p>
-        <h1 id="titulo-tiendas">Un espacio para cada comunidad</h1>
-        <p>Conoce las sucursales activas de Aula Verde.</p>
+        <h1 id="titulo-tiendas">Ecuentra tu Despensa Verde más cercana</h1>
+        <p>
+          Conoce nuestras sucursales, sus direcciones y horarios de atención.
+        </p>
         <p className="demo-label">
-          Todas las sucursales y direcciones son ficticias y demostrativas. No
-          corresponden a locales reales.
+          [DEMO]Todas las sucursales y direcciones son ficticias y puramente
+          demostrativas.
         </p>
       </section>
       <div className="branch-section">

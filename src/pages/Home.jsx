@@ -6,15 +6,12 @@ function Home() {
   return (
     <>
       <section className="page-panel" aria-labelledby="titulo-inicio">
-        <p className="eyebrow">Inicio · Aula Verde</p>
-        <h1 id="titulo-inicio">El inventario, a la vista</h1>
-        <p>
-          Consulta los productos, precios y existencias de nuestro supermercado
-          ficticio.
-        </p>
+        <p className="eyebrow">Inicio · Despensa Verde</p>
+        <h1 id="titulo-inicio">Catálogo</h1>
+        <p>Consulta productos, precios y existencias.</p>
         <p className="demo-label">
-          Proyecto académico. Los productos, precios y cantidades son
-          demostrativos.
+          [DEMO] Este es un proyecto académico. Los productos, precios y
+          existencias son demostrativos.
         </p>
       </section>
       <CatalogoProductos

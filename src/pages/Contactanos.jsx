@@ -9,7 +9,8 @@ function Contactanos() {
       <p className="eyebrow">Contáctanos</p>
       <h1 id="titulo-contacto">Estamos para ayudarte</h1>
       <p>
-        Practica el ingreso de una consulta sobre nuestro supermercado ficticio.
+        Déjanos tus consultas, sugerencias y comentarios usando el fomulario a
+        continuación.
       </p>
       <FormularioContacto />
     </section>
