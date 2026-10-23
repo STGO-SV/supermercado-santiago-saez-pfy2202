@@ -2,11 +2,11 @@
 
 **PFY2202 · Desarrollo Frontend II · Experiencia 1 · Forma B**
 
-Proyecto: **Aula Verde**, supermercado ficticio. Fecha: **21 de octubre de 2026**, America/Santiago.
+Proyecto: **Aula Verde**, supermercado ficticio. Implementación: **21 de octubre de 2026**. Cierre: **22 de octubre de 2026**, America/Santiago.
 
 ## A. Resultado y alcance
 
-La SPA queda implementada para revisión humana: catálogo de consulta, sucursales activas, contacto demostrativo y navegación inferior con React Router. Se trabajó en `C:\Dev\Duoc\DFEII\DFE_II_supermercado`. El proyecto anterior se consultó en modo de lectura y no se modificó.
+Se completó la implementación de la SPA: catálogo de consulta, sucursales activas, contacto demostrativo y navegación inferior con React Router. Se trabajó en `C:\Dev\Duoc\DFEII\DFE_II_supermercado`. El proyecto anterior se consultó en modo de lectura y no se modificó.
 
 No se dispone de los documentos oficiales originales de la evaluación. La auditoría usa los requisitos explícitos de los dos textos adjuntos y la indicación de dos criterios de 50 puntos; no constituye una calificación oficial. El primer texto termina con una frase truncada después de «contengan la»; se cumplieron sus instrucciones completas y legibles sobre informes y validación manual.
 
@@ -57,9 +57,9 @@ El menú inferior persiste en el layout; NavLink aporta aria-current y el CSS a�
 
 No hay modificación de existencias ni servicios de recepción. El formulario conserva valores solo en memoria mientras está montado; no solicita envíos ni escribe almacenamiento del navegador. Las imágenes externas no son necesarias: las tarjetas son representaciones tipográficas con CSS propio.
 
-## C. Comprobaciones ejecutadas
+## C. Comprobaciones técnicas del 21 de octubre de 2026
 
-**55 comprobaciones técnicas agrupadas: 14 pruebas unitarias automáticas, 38 escenarios de navegador asistidos por herramientas y tres controles de calidad.** El recuento corresponde a casos únicos finales; no suma las repeticiones de comandos ni cada aserción interna como prueba distinta.
+**55 comprobaciones técnicas agrupadas: 14 pruebas unitarias automáticas, 38 escenarios de navegador y tres controles de calidad de código.** El recuento corresponde a casos únicos finales; no suma las repeticiones de comandos ni cada aserción interna como prueba distinta.
 
 | Grupo                  | Cantidad | Resultado                                                                                                                                  |
 | ---------------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -98,51 +98,84 @@ Git avisó inicialmente de conversión LF/CRLF; se añade `.gitattributes` para 
 
 No se ejecutó una auditoría completa con lector de pantalla, dispositivos físicos, todos los navegadores ni herramienta automática de contraste/WCAG. Se revisaron semántica, etiquetas, estilos de contraste y teclado en el navegador integrado; esto no equivale a certificar accesibilidad. No se probó despliegue público porque no está autorizado. La recepción real de mensajes está excluida del alcance.
 
-## D. Protocolo de revisión humana
+## D. Validación manual del 22 de octubre de 2026
 
-El protocolo completo está en [pruebas-manuales-semana-1.md](pruebas-manuales-semana-1.md): **18 pruebas**, con condiciones, acciones, resultados observables y señales de fallo. **Las 18 permanecen «Pendiente de ejecución por el usuario».** No se trasladaron resultados del agente a esa columna.
+El protocolo completo se conserva en [pruebas-manuales-semana-1.md](pruebas-manuales-semana-1.md). **Se registran 18/18 pruebas APROBADAS, con fecha de ejecución 22-10-2026 y sin fallos detectados.** Se conservaron íntegramente los procedimientos y resultados esperados de los 18 casos.
 
-Las 14 pruebas unitarias pueden repetirse con `npm test`; los 38 escenarios asistidos corresponden a esta sesión de navegador, no a una suite end-to-end instalada. La intervención humana sigue siendo necesaria para registrar los resultados personales, evaluar comodidad visual y contrastar la pauta original. El protocolo explica cómo simular errores con Overrides del navegador sin tocar los originales.
+El registro se basa en la confirmación de cierre de la ejecución manual recibida el 22 de octubre de 2026. No se atribuyen esos resultados a pruebas unitarias ni a una ejecución automatizada. No se especificó la versión exacta del navegador utilizado en la ejecución manual.
 
-## E. Git y preparación de entrega
+Se confirmaron navegación SPA, rutas principales y 404, carga HTTP de ambos JSON, filtros y búsqueda, exclusión de sucursales inactivas, formulario demostrativo sin envío, teclado y las nueve combinaciones de página y resolución. Se confirmó el manejo de fallos de red y datos inválidos, la restauración de ambos JSON y la desactivación de los bloqueos y Local Overrides.
+
+Las 55 comprobaciones técnicas previas se mantienen separadas: 14 pruebas unitarias, 38 escenarios de navegador y tres controles de calidad de código. Las pruebas unitarias se reproducen con `npm test`; las evidencias de navegador corresponden a la sesión del 21 de octubre y no constituyen una suite end-to-end instalada. No se presenta el conjunto de 73 registros como una única suite automatizada.
+
+## E. Git y preparación de publicación
 
 - Rama: `main`.
 - Primer commit: `bd77a67` — «Implementa catálogo, sucursales y contacto demostrativo con navegación SPA».
-- Segundo commit documental: «Documenta validaciones y prepara revisión de Semana 1». Este informe forma parte de ese commit; su identificador se consulta mediante `git log -2 --oneline`.
+- Segundo commit documental: «Documenta validaciones y prepara revisión de Semana 1». Su identificador es `6634846`.
 - Ajuste documental final: «Normaliza formato de la documentación», para eliminar espacios finales de Markdown detectados por Git. El historial completo se consulta con `git log --oneline`.
 - Registro operativo final: «Registra comprobaciones de cierre e hibernación».
-- El cierre exige `git status --porcelain` vacío después del commit documental.
-- El estado se comprobó limpio tras los commits de implementación y documentación; se vuelve a comprobar tras el registro operativo final.
+- Antes de este cierre documental se comprobó un árbol limpio en `main`. Se exige nuevamente `git status --porcelain` vacío después del commit de cierre.
+- Commit de cierre previsto: «Cierra validación manual y documentación de Semana 1». El identificador final se obtiene con `git log -1 --oneline`.
+- Nombre previsto para el repositorio público: `supermercado-santiago-saez-pfy2202`. La creación y publicación permanecen pendientes de autorización.
 - `git remote -v` no registra remotos. No se creó GitHub ni se ejecutó push.
 - `.gitignore` excluye dependencias, producción y archivos locales. No se añaden secretos ni archivos personales.
 - No se creó ZIP definitivo ni se publicó el trabajo.
 
 ## F. Auditoría contra los requisitos proporcionados
 
-| Requisito                           | Archivo/componente                                | Evidencia                                                                             | Estado                                                |
-| ----------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------- |
-| Home relacionado con inventario     | Home, CatalogoProductos, TarjetaProducto          | 12 tarjetas y campos verificados en navegador; JSON y utilidades probados             | Completo                                              |
-| Datos de productos por JSON         | productos.json, useProductos, validarDatos        | Carga normal, vacío, inválido, JSON mal formado y HTTP 404                            | Completo                                              |
-| Nuestras tiendas                    | NuestrasTiendas, TarjetaSucursal, sucursales.json | Tres activas visibles, inactiva oculta; vacío y errores probados                      | Completo                                              |
-| Contáctanos                         | Contactanos, FormularioContacto, validarContacto  | Obligatorios, espacios, correo, éxito demostrativo y edición comprobados              | Completo                                              |
-| Menú inferior persistente           | MainLayout, index.css                             | Disponible en las cuatro vistas y contenido final alcanzable                          | Completo                                              |
-| React Router y SPA                  | App, main, NavLink, Outlet                        | Tres rutas, 404, recargas, historial y ausencia de recarga al navegar                 | Completo                                              |
-| Accesibilidad básica                | Layout, formulario, tarjetas, CSS                 | Teclado, etiquetas, foco, jerarquía y estado activo revisados; sin certificación WCAG | Completo dentro de las verificaciones descritas       |
-| Responsive                          | index.css                                         | Nueve combinaciones en 375/768/1366 px sin desbordamiento ni ocultación final         | Completo                                              |
-| ESLint, Prettier y build            | Configuraciones y scripts existentes              | Tres comandos finales satisfactorios; 14 pruebas unitarias aprobadas                  | Completo                                              |
-| Limpieza y documentación            | README, exclusiones, utilidades y recursos        | Sin referencias antiguas en aplicación/README; recursos de muestra retirados          | Completo                                              |
-| Repositorio independiente preparado | Git local en el directorio nuevo                  | Commits locales y ausencia de remoto; proyecto anterior intacto                       | Completo                                              |
-| Repositorio en GitHub               | Pendiente de autorización futura                  | Publicación expresamente prohibida en este encargo                                    | Parcial: preparación local completa, remoto pendiente |
-| Revisión humana y contraste oficial | Protocolo manual y este informe                   | 18 resultados personales pendientes; originales oficiales no disponibles              | Pendiente de revisión humana                          |
+| Requisito                                     | Archivo/componente                                | Evidencia                                                                             | Estado                                                |
+| --------------------------------------------- | ------------------------------------------------- | ------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Home relacionado con inventario               | Home, CatalogoProductos, TarjetaProducto          | 12 tarjetas y campos verificados en navegador; JSON y utilidades probados             | Completo                                              |
+| Datos de productos por JSON                   | productos.json, useProductos, validarDatos        | Carga normal, vacío, inválido, JSON mal formado y HTTP 404                            | Completo                                              |
+| Nuestras tiendas                              | NuestrasTiendas, TarjetaSucursal, sucursales.json | Tres activas visibles, inactiva oculta; vacío y errores probados                      | Completo                                              |
+| Contáctanos                                   | Contactanos, FormularioContacto, validarContacto  | Obligatorios, espacios, correo, éxito demostrativo y edición comprobados              | Completo                                              |
+| Menú inferior persistente                     | MainLayout, index.css                             | Disponible en las cuatro vistas y contenido final alcanzable                          | Completo                                              |
+| React Router y SPA                            | App, main, NavLink, Outlet                        | Tres rutas, 404, recargas, historial y ausencia de recarga al navegar                 | Completo                                              |
+| Accesibilidad básica                          | Layout, formulario, tarjetas, CSS                 | Teclado, etiquetas, foco, jerarquía y estado activo revisados; sin certificación WCAG | Completo dentro de las verificaciones descritas       |
+| Responsive                                    | index.css                                         | Nueve combinaciones en 375/768/1366 px sin desbordamiento ni ocultación final         | Completo                                              |
+| ESLint, Prettier y build                      | Configuraciones y scripts existentes              | Tres comandos finales satisfactorios; 14 pruebas unitarias aprobadas                  | Completo                                              |
+| Limpieza y documentación                      | README, exclusiones, utilidades y recursos        | Sin referencias antiguas en aplicación/README; recursos de muestra retirados          | Completo                                              |
+| Repositorio independiente preparado           | Git local en el directorio nuevo                  | Commits locales y ausencia de remoto; proyecto anterior intacto                       | Completo                                              |
+| Repositorio en GitHub                         | Pendiente de autorización futura                  | Publicación expresamente prohibida en este encargo                                    | Parcial: preparación local completa, remoto pendiente |
+| Validación manual                             | Protocolo manual y este informe                   | 18/18 pruebas aprobadas el 22-10-2026, sin defectos detectados                        | Completo                                              |
+| Contraste con documentos oficiales originales | Requisitos explícitos recibidos                   | Los originales oficiales no están disponibles; no se asigna una calificación          | Limitación documental                                 |
 
-Los dos criterios de evaluación informados quedan cubiertos por la implementación y sus evidencias, sin asignar una nota anticipada. Lo necesario para cerrar la entrega es ejecutar la revisión humana, cotejar los documentos oficiales y autorizar posteriormente el remoto y la entrega.
+Los dos criterios de evaluación informados quedan cubiertos por la implementación y sus evidencias, sin asignar una nota anticipada. La validación manual se cerró satisfactoriamente el 22 de octubre de 2026. Permanecen pendientes el contraste con los documentos oficiales originales y la autorización de publicación en GitHub.
 
-## G. Guardado e hibernación
+## G. Registro operativo del 21 de octubre de 2026
 
-La autorización anticipada fue dada en el encargo integrado. Antes de desarrollar, `powercfg /a` confirmó **Hibernar disponible** y se localizaron las herramientas de Windows.
+Se guardaron la implementación, las evidencias y los informes antes de solicitar hibernación mediante `shutdown.exe /h`. Previamente se detuvo el servidor de desarrollo y se comprobó la finalización de las operaciones de pruebas, instalaciones y Git.
 
-Antes de solicitar hibernación se verifican los archivos guardados, los commits, el estado limpio y el fin de pruebas/instalaciones/escrituras. Se detiene el servidor de desarrollo iniciado por el agente. Se vuelve a consultar la disponibilidad y solicitudes de energía. No se ejecuta apagado, reinicio, cierre de sesión ni hibernación forzada.
+Se comprobó la disponibilidad de hibernación mediante `powercfg /a`. La consulta `powercfg /requests` no estuvo disponible por falta de privilegios de administrador. No se modificaron las opciones de energía ni se solicitó apagado, reinicio o hibernación forzada. El registro documenta la solicitud emitida, sin certificar por sí mismo la transición efectiva del equipo.
 
-**Este documento se guarda antes de la solicitud final. No certifica que el equipo ya haya hibernado:** la transición solo puede producirse después y depende de que Windows acepte la solicitud. La hibernación será la última operación; si Windows o la revisión de permisos la rechazan, no se fuerza.
+Este registro es histórico. El cierre documental del 22 de octubre de 2026 no incluye una nueva solicitud de hibernación.
 
-Comprobación operativa final: servidor de desarrollo detenido, comandos de pruebas e instalaciones terminados, consultas de procesos sin Git ni procesos Node/npm del proyecto en ejecución. Los dos informes existen y tienen contenido. Windows sigue indicando hibernación disponible. `powercfg /requests` no pudo consultar los bloqueos de energía porque la sesión no dispone de privilegios de administrador, incluso al ejecutarlo fuera del aislamiento; no se solicitó elevación interactiva ni se modificaron opciones de energía. No se detectó una operación propia pendiente de escritura ni otro riesgo concreto de pérdida de datos. Se solicitará hibernación normal, sin forzar, mediante `shutdown.exe /h`. Al volver, el servidor se inicia con el comando del README.
+## H. Cierre definitivo del 22 de octubre de 2026
+
+Se cerró la Semana 1 con 18 pruebas manuales aprobadas y ningún defecto detectado durante esa revisión. Se mantienen las 55 comprobaciones técnicas satisfactorias del 21 de octubre como un registro independiente. No se modificaron funcionalidades, arquitectura, datos ni dependencias durante el cierre documental.
+
+### Auditoría técnica de cierre
+
+Se ejecutaron nuevamente los cuatro comandos de validación el 22 de octubre de 2026:
+
+| Naturaleza                     | Comando                | Resultado                                              |
+| ------------------------------ | ---------------------- | ------------------------------------------------------ |
+| Pruebas unitarias              | `npm test`             | 14 aprobadas; cero fallos, cancelaciones u omisiones.  |
+| Calidad de código              | `npm run lint`         | Ejecución satisfactoria, sin errores ni advertencias.  |
+| Calidad de código: formato     | `npm run format:check` | Todos los archivos comprobados conformes con Prettier. |
+| Calidad de código: compilación | `npm run build`        | Compilación de producción satisfactoria.               |
+
+Esta repetición de validaciones no incrementa el recuento histórico de 55 comprobaciones ni sustituye las 18 pruebas manuales.
+
+Se revisaron las instrucciones del README, las exclusiones de Git, los archivos versionados, las dependencias y las referencias operativas. Se compararon las huellas SHA256 de ambos JSON con las registradas en la sección C. Se conservaron los datos originales y no se detectaron archivos temporales de prueba ni cambios en `package.json` o `package-lock.json`.
+
+La revisión de nombres y contenido de archivos versionados no detectó contraseñas, tokens, claves privadas ni archivos de uso privado. Los datos de contacto presentes en las pruebas son ficticios. Las referencias al código anterior en la sección A son históricas y no intervienen en la instalación ni ejecución. La revisión no constituye una certificación de ausencia absoluta de secretos.
+
+Los archivos modificados para este cierre son `README.md`, `docs/pruebas-manuales-semana-1.md` y `docs/informe-implementacion-semana-1.md`. Se aplica redacción técnica e impersonal y se distinguen pruebas manuales, unitarias, de navegador y controles de calidad de código.
+
+### Publicación y límites pendientes
+
+El contenido local queda preparado para publicación pública en el repositorio previsto `supermercado-santiago-saez-pfy2202`. La creación del remoto y `git push` no se han ejecutado. No se genera un ZIP de entrega.
+
+No se detectaron defectos funcionales durante la revisión manual. Se conservan las limitaciones descritas: formulario sin recepción real, ausencia de despliegue público comprobado, falta de documentos oficiales originales y ausencia de certificación completa de accesibilidad. La siguiente operación pendiente es la autorización de publicación.

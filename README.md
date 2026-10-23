@@ -19,7 +19,7 @@ npm ci
 npm run dev -- --host 127.0.0.1 --port 5173 --strictPort
 ```
 
-Abrir <http://127.0.0.1:5173/>. Después de hibernar, si el servidor no está activo, volver a ejecutar el segundo comando.
+La aplicación se consulta en <http://127.0.0.1:5173/>. Si el servidor no está activo, se ejecuta nuevamente el segundo comando.
 
 ## Comandos
 
@@ -68,11 +68,13 @@ La disponibilidad coincide con el stock: una cantidad cero se muestra como «Sin
 
 El catálogo es de consulta: no modifica existencias. El formulario solo valida nombre, correo, asunto y mensaje; **no envía mensajes ni guarda los datos ingresados**. Los campos se mantienen únicamente en memoria mientras la página está montada. No hay servicios externos ni recepción de consultas.
 
-El repositorio es local. La publicación y la entrega definitiva requieren revisión humana. Para un alojamiento futuro con `BrowserRouter`, configurar la resolución de rutas SPA hacia `index.html` y revisar `base` si se publica bajo una subcarpeta. No hay despliegue configurado.
+El repositorio es local. La publicación pública permanece pendiente de autorización. El nombre previsto en GitHub es `supermercado-santiago-saez-pfy2202`; todavía no se ha creado el remoto ni se ha ejecutado `git push`.
+
+Para un alojamiento futuro con `BrowserRouter`, se debe configurar la resolución de rutas SPA hacia `index.html` y revisar `base` si se publica bajo una subcarpeta. No hay despliegue configurado.
 
 ## Revisión
 
 - [Protocolo de 18 pruebas manuales](docs/pruebas-manuales-semana-1.md).
 - [Informe de implementación y comprobaciones](docs/informe-implementacion-semana-1.md).
 
-Las pruebas del usuario permanecen pendientes hasta su ejecución personal.
+El 22 de octubre de 2026 se completó la validación manual: **18/18 pruebas aprobadas, sin fallos detectados**. Se conservan por separado las **55 comprobaciones técnicas satisfactorias** registradas el 21 de octubre: 14 pruebas unitarias, 38 escenarios de navegador y tres controles de calidad de código. La auditoría técnica de cierre y sus limitaciones se detallan en el informe.
