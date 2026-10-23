@@ -68,9 +68,15 @@ La disponibilidad coincide con el stock: una cantidad cero se muestra como «Sin
 
 El catálogo es de consulta: no modifica existencias. El formulario solo valida nombre, correo, asunto y mensaje; **no envía mensajes ni guarda los datos ingresados**. Los campos se mantienen únicamente en memoria mientras la página está montada. No hay servicios externos ni recepción de consultas.
 
-El repositorio es local. La publicación pública permanece pendiente de autorización. El nombre previsto en GitHub es `supermercado-santiago-saez-pfy2202`; todavía no se ha creado el remoto ni se ha ejecutado `git push`.
+## Repositorio
 
-Para un alojamiento futuro con `BrowserRouter`, se debe configurar la resolución de rutas SPA hacia `index.html` y revisar `base` si se publica bajo una subcarpeta. No hay despliegue configurado.
+El código fuente del proyecto se encuentra disponible públicamente en GitHub: https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202
+
+La rama principal del proyecto es `main`.
+
+El repositorio contiene la implementación de la Experiencia 1, Semana 1, Forma B, de Desarrollo Frontend II (PFY2202).
+
+Para un futuro alojamiento con BrowserRouter se debe configurar la resolución de rutas SPA hacia `index.html` y revisar `base` si se publica bajo una subcarpeta. No hay despliegue configurado.
 
 ## Revisión
 
