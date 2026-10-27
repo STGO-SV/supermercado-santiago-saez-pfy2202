@@ -1,0 +1,114 @@
+{
+  "fecha": "2026-10-27",
+  "navegador": "Chrome 156.0.8078.48",
+  "entorno": "Vite 8.3.5 en servidor local de desarrollo con StrictMode",
+  "resultados": [
+    {
+      "nombre": "Catálogo inicial: doce productos y filtros originales",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Menú inferior original y nuevo menú secundario disponibles",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Tabla inicial: doce artículos, marcas no informadas y tipos originales",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Navegación SPA conserva la carga inicial sin nuevas solicitudes de productos",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Formulario vacío: cinco errores asociados y foco en nombre",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Formulario rechaza espacios, precio decimal y cantidad negativa",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Alta válida confirma incorporación y limpia el formulario sin solicitudes de escritura",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Alta visible en tabla con marca, categoría, precio y disponibilidad coherentes",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Alta visible en catálogo con búsqueda normalizada y nueva categoría",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Alta con cantidad cero: sin stock en tabla y catálogo",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Historial mantiene rutas y artículos agregados",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Sucursales conservan tres activas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Contacto conserva validación sin envío y reinicio al navegar",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Recarga restablece doce productos y no utiliza almacenamiento persistente",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Acceso directo y recarga de las dos rutas nuevas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Ruta desconocida conserva página 404 y menús sin selección activa",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Adaptación y acceso por teclado a 375 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Adaptación y acceso por teclado a 768 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Adaptación y acceso por teclado a 1366 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Semilla vacía: inventario y catálogo vacíos con ingreso habilitado",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Error HTTP: aviso compartido y formulario de ingreso bloqueado",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Error de red: navegación utilizable sin incorporación",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "JSON mal formado: aviso compartido sin renderizado parcial",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Registro inválido: rechazo de la lista completa",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Carga pendiente impide incorporar artículos y finaliza correctamente",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "No se detectan excepciones de ejecución en el navegador",
+      "resultado": "APROBADO"
+    }
+  ],
+  "erroresDeEjecucion": [],
+  "total": 26,
+  "aprobados": 26
+}

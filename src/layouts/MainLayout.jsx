@@ -1,4 +1,5 @@
 import { NavLink, Outlet } from 'react-router'
+import MenuInventario from '../components/MenuInventario.jsx'
 
 function MainLayout() {
   return (
@@ -12,6 +13,7 @@ function MainLayout() {
           <p className="site-tagline">Gestión de inventario</p>
         </div>
       </header>
+      <MenuInventario />
       <main id="contenido" className="container main-content" tabIndex={-1}>
         <Outlet />
       </main>
