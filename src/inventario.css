@@ -3,23 +3,6 @@
   background: #eaf3ec;
   border-bottom: 1px solid #c6d6ca;
 }
-.inventory-nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-  margin-block: 0;
-  padding-block: 0.75rem;
-  padding-left: 0;
-  list-style: none;
-}
-.inventory-nav a {
-  display: inline-block;
-  padding: 0.75rem;
-  border: 2px solid transparent;
-  border-radius: 0.4rem;
-  font-weight: 650;
-  text-underline-offset: 0.25em;
-}
 .inventory-nav a[aria-current='page'] {
   color: #fff;
   background: #174c3a;
@@ -29,31 +12,9 @@
   max-width: 48rem;
   margin-inline: auto;
 }
-.article-form {
-  display: grid;
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-.article-form .notice {
-  margin: 0;
-}
-.article-form button {
-  justify-self: start;
-}
-.inventory-table-scroll {
-  max-width: 100%;
-  overflow-x: auto;
-}
 .inventory-table-scroll:focus-visible {
   outline: 3px solid #ad5b00;
   outline-offset: 3px;
-}
-.inventory-table {
-  width: 100%;
-  min-width: 56rem;
-  border-collapse: collapse;
-  text-align: left;
-  font-size: 0.95rem;
 }
 .inventory-table caption {
   padding-block: 1rem;
@@ -74,9 +35,4 @@
 }
 .inventory-table thead th {
   overflow-wrap: normal;
-}
-@media (max-width: 600px) {
-  .article-form button {
-    justify-self: stretch;
-  }
 }

@@ -3,12 +3,12 @@ import { formatoPrecio } from '../utils/formatoPrecio.js'
 function TablaInventario({ productos }) {
   return (
     <div
-      className="inventory-table-scroll"
+      className="inventory-table-scroll tw:max-w-full tw:overflow-x-auto"
       role="region"
       aria-label="Tabla de inventario con desplazamiento horizontal"
       tabIndex={0}
     >
-      <table className="inventory-table">
+      <table className="inventory-table tw:w-full tw:min-w-[56rem] tw:border-collapse tw:text-left tw:text-[0.95rem]">
         <caption>Artículos del inventario: {productos.length}</caption>
         <thead>
           <tr>

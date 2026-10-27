@@ -1,0 +1,8 @@
+/* Utilidades prefijadas; el CSS existente conserva los estilos base. */
+@layer theme, base, components, utilities;
+@import 'tailwindcss/theme.css' layer(theme) prefix(tw);
+@import 'tailwindcss/utilities.css' layer(utilities) prefix(tw) source(none);
+
+@source './components/MenuInventario.jsx';
+@source './components/FormularioArticulo.jsx';
+@source './components/TablaInventario.jsx';

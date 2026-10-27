@@ -1,0 +1,311 @@
+{
+  "fecha": "2026-10-27",
+  "navegador": "Chrome 156.0.8078.48",
+  "resultados": [
+    {
+      "nombre": "Conservación visual y estilos de inicio a 375 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de tiendas a 375 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de contacto a 375 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de inicio a 768 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de tiendas a 768 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de contacto a 768 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de inicio a 1366 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de tiendas a 1366 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Conservación visual y estilos de contacto a 1366 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Menú: distribución flex aplicada por Tailwind",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Formulario: distribución grid aplicada por Tailwind",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Formulario: separación aplicada por Tailwind",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Formulario inválido: cinco errores asociados y foco visible",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Validación rechaza espacios, decimales y negativos",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Alta válida confirma, limpia campos y no realiza solicitudes de escritura",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Inventario comparte el alta y conserva marcas originales no informadas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Contenedor: overflow horizontal aplicado por Tailwind",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Tabla: ancho mínimo aplicado por Tailwind",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Tabla: bordes colapsados por Tailwind",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Catálogo refleja el alta, la búsqueda y la categoría nueva",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Alta con stock cero en tabla y catálogo, sin IDs duplicados",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Historial y selección activa conservan el estado compartido",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Contacto y sucursales mantienen el comportamiento anterior",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Recarga recupera la semilla sin persistencia local",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Acceso directo, recargas y 404 mantienen las rutas correctas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Adaptación, teclado, tabla desplazable y menú inferior a 375 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Adaptación, teclado, tabla desplazable y menú inferior a 768 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Adaptación, teclado, tabla desplazable y menú inferior a 1366 px",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Semilla vacía conserva vistas vacías e ingreso habilitado",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Error HTTP conserva aviso compartido e impide altas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Error de red conserva navegación y bloqueo de altas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "JSON mal formado no se renderiza parcialmente",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Registros inválidos se rechazan en todas las vistas",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "Carga pendiente no permite incorporar y finaliza sin duplicados",
+      "resultado": "APROBADO"
+    },
+    {
+      "nombre": "No se registran excepciones de ejecución",
+      "resultado": "APROBADO"
+    }
+  ],
+  "comparacionesSemana1": [
+    {
+      "pagina": "inicio",
+      "ancho": 375,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "3d5707261335cfe5cea460fbf70d4c14983dbba1ebc0fd5489a3cb525e91d2a2",
+      "sha256Despues": "3d5707261335cfe5cea460fbf70d4c14983dbba1ebc0fd5489a3cb525e91d2a2"
+    },
+    {
+      "pagina": "tiendas",
+      "ancho": 375,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "8ed12c1ff81ff51005e010b737bc31d403af8e9bb0b9654970f884233bbb2422",
+      "sha256Despues": "8ed12c1ff81ff51005e010b737bc31d403af8e9bb0b9654970f884233bbb2422"
+    },
+    {
+      "pagina": "contacto",
+      "ancho": 375,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "871c8a23b2788805e2a902dd5f75dc9c438af3de1935ab40031a9003f6a45b71",
+      "sha256Despues": "871c8a23b2788805e2a902dd5f75dc9c438af3de1935ab40031a9003f6a45b71"
+    },
+    {
+      "pagina": "inicio",
+      "ancho": 768,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "90d6ba01c0267fee128f8b0465bbeedb35e33efa7578a249c21d6b890c5fa660",
+      "sha256Despues": "90d6ba01c0267fee128f8b0465bbeedb35e33efa7578a249c21d6b890c5fa660"
+    },
+    {
+      "pagina": "tiendas",
+      "ancho": 768,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "f1c30a95cd79de7ddbf867869848344a0fccf4a9f17dd8c8998311407f95227c",
+      "sha256Despues": "f1c30a95cd79de7ddbf867869848344a0fccf4a9f17dd8c8998311407f95227c"
+    },
+    {
+      "pagina": "contacto",
+      "ancho": 768,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "e3928d457198464eb4d07d1fa7ce7027eafc5d190e35e8e604253c0ddb8eb433",
+      "sha256Despues": "e3928d457198464eb4d07d1fa7ce7027eafc5d190e35e8e604253c0ddb8eb433"
+    },
+    {
+      "pagina": "inicio",
+      "ancho": 1366,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "47fbf3e9d4f3c4fe53ab820e8e81acad27c7b6d2e437998805f844d0dae1de59",
+      "sha256Despues": "47fbf3e9d4f3c4fe53ab820e8e81acad27c7b6d2e437998805f844d0dae1de59"
+    },
+    {
+      "pagina": "tiendas",
+      "ancho": 1366,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "3405accb02acbd9d629db9f598f4d6a4065d8efd9964b4cc19f0bbedcf482a9b",
+      "sha256Despues": "3405accb02acbd9d629db9f598f4d6a4065d8efd9964b4cc19f0bbedcf482a9b"
+    },
+    {
+      "pagina": "contacto",
+      "ancho": 1366,
+      "estilosIdenticos": true,
+      "capturaIdentica": true,
+      "sha256Antes": "443eaed7826f30663fd012001d11909882b6957c6d3b42baa7f73ee80e026201",
+      "sha256Despues": "443eaed7826f30663fd012001d11909882b6957c6d3b42baa7f73ee80e026201"
+    }
+  ],
+  "estilosTailwind": [
+    {
+      "selector": ".inventory-nav-list",
+      "clase": "tw:flex",
+      "propiedad": "display",
+      "aplicado": "flex",
+      "sinClase": "block",
+      "restaurado": "flex",
+      "reglas": [
+        ".tw\\:my-0 { margin-block: 0px; }",
+        ".tw\\:flex { display: flex; }",
+        ".tw\\:list-none { list-style-type: none; }",
+        ".tw\\:flex-wrap { flex-wrap: wrap; }",
+        ".tw\\:gap-x-4 { column-gap: calc(var(--tw-spacing) * 4); }",
+        ".tw\\:gap-y-2 { row-gap: calc(var(--tw-spacing) * 2); }",
+        ".tw\\:py-3 { padding-block: calc(var(--tw-spacing) * 3); }",
+        ".tw\\:pl-0 { padding-left: 0px; }"
+      ]
+    },
+    {
+      "selector": ".article-form",
+      "clase": "tw:grid",
+      "propiedad": "display",
+      "aplicado": "grid",
+      "sinClase": "block",
+      "restaurado": "grid",
+      "reglas": [
+        ".tw\\:mt-6 { margin-top: calc(var(--tw-spacing) * 6); }",
+        ".tw\\:grid { display: grid; }",
+        ".tw\\:gap-5 { gap: calc(var(--tw-spacing) * 5); }"
+      ]
+    },
+    {
+      "selector": ".article-form",
+      "clase": "tw:gap-5",
+      "propiedad": "gap",
+      "aplicado": "20px",
+      "sinClase": "normal",
+      "restaurado": "20px",
+      "reglas": [
+        ".tw\\:mt-6 { margin-top: calc(var(--tw-spacing) * 6); }",
+        ".tw\\:grid { display: grid; }",
+        ".tw\\:gap-5 { gap: calc(var(--tw-spacing) * 5); }"
+      ]
+    },
+    {
+      "selector": ".inventory-table-scroll",
+      "clase": "tw:overflow-x-auto",
+      "propiedad": "overflow-x",
+      "aplicado": "auto",
+      "sinClase": "visible",
+      "restaurado": "auto",
+      "reglas": [
+        ".tw\\:max-w-full { max-width: 100%; }",
+        ".tw\\:overflow-x-auto { overflow-x: auto; }"
+      ]
+    },
+    {
+      "selector": ".inventory-table",
+      "clase": "tw:min-w-[56rem]",
+      "propiedad": "min-width",
+      "aplicado": "896px",
+      "sinClase": "0px",
+      "restaurado": "896px",
+      "reglas": [
+        ".tw\\:w-full { width: 100%; }",
+        ".tw\\:min-w-\\[56rem\\] { min-width: 56rem; }",
+        ".tw\\:border-collapse { border-collapse: collapse; }",
+        ".tw\\:text-left { text-align: left; }",
+        ".tw\\:text-\\[0\\.95rem\\] { font-size: 0.95rem; }"
+      ]
+    },
+    {
+      "selector": ".inventory-table",
+      "clase": "tw:border-collapse",
+      "propiedad": "border-collapse",
+      "aplicado": "collapse",
+      "sinClase": "separate",
+      "restaurado": "collapse",
+      "reglas": [
+        ".tw\\:w-full { width: 100%; }",
+        ".tw\\:min-w-\\[56rem\\] { min-width: 56rem; }",
+        ".tw\\:border-collapse { border-collapse: collapse; }",
+        ".tw\\:text-left { text-align: left; }",
+        ".tw\\:text-\\[0\\.95rem\\] { font-size: 0.95rem; }"
+      ]
+    }
+  ],
+  "erroresDeEjecucion": [],
+  "total": 35,
+  "aprobados": 35
+}

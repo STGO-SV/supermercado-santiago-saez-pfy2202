@@ -59,12 +59,12 @@ function FormularioArticulo() {
 
   return (
     <form
-      className="article-form"
+      className="article-form tw:mt-6 tw:grid tw:gap-5"
       noValidate
       onSubmit={incorporarArticulo}
       aria-describedby="ayuda-articulo"
     >
-      <p id="ayuda-articulo" className="notice">
+      <p id="ayuda-articulo" className="notice tw:m-0">
         Todos los campos son obligatorios. Precio y cantidad deben ser enteros
         no negativos. Los artículos agregados se conservan durante la navegación
         y se pierden al recargar la página.
@@ -95,21 +95,24 @@ function FormularioArticulo() {
         </div>
       ))}
       {Object.values(errores).some(Boolean) && (
-        <p role="alert" className="notice error-notice">
+        <p role="alert" className="notice error-notice tw:m-0">
           Revisa los campos indicados antes de continuar.
         </p>
       )}
       {errorIngreso && (
-        <p role="alert" className="notice error-notice">
+        <p role="alert" className="notice error-notice tw:m-0">
           {errorIngreso}
         </p>
       )}
       {confirmacion && (
-        <p role="status" className="notice success-notice">
+        <p role="status" className="notice success-notice tw:m-0">
           {confirmacion} <Link to="/inventario">Ver inventario</Link>
         </p>
       )}
-      <button type="submit" className="button-primary">
+      <button
+        type="submit"
+        className="button-primary tw:justify-self-start tw:max-[600px]:justify-self-stretch"
+      >
         Agregar artículo
       </button>
     </form>
