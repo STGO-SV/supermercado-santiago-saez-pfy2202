@@ -1,8 +1,9 @@
+import ErrorCarga from '../components/ErrorCarga.jsx'
 import TarjetaSucursal from '../components/TarjetaSucursal.jsx'
 import { useSucursales } from '../hooks/useSucursales.js'
 
 function NuestrasTiendas() {
-  const { sucursales, cargando, error } = useSucursales()
+  const { sucursales, cargando, error, reintentar } = useSucursales()
   const activas = sucursales.filter((sucursal) => sucursal.activa)
   return (
     <>
@@ -23,9 +24,7 @@ function NuestrasTiendas() {
             Cargando sucursales…
           </p>
         ) : error ? (
-          <p role="alert" className="notice error-notice">
-            {error}
-          </p>
+          <ErrorCarga mensaje={error} reintentar={reintentar} />
         ) : activas.length === 0 ? (
           <p role="status" className="notice">
             No hay sucursales activas para mostrar.

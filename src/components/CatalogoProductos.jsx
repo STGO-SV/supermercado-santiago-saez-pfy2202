@@ -1,8 +1,9 @@
+import ErrorCarga from './ErrorCarga.jsx'
 import { useState } from 'react'
 import TarjetaProducto from './TarjetaProducto.jsx'
 import { normalizarTexto } from '../utils/normalizarTexto.js'
 
-function CatalogoProductos({ productos, cargando, error }) {
+function CatalogoProductos({ productos, cargando, error, reintentar }) {
   const [busqueda, setBusqueda] = useState('')
   const [categoria, setCategoria] = useState('')
   const categorias = [
@@ -28,9 +29,7 @@ function CatalogoProductos({ productos, cargando, error }) {
           Cargando productos…
         </p>
       ) : error ? (
-        <p role="alert" className="notice error-notice">
-          {error}
-        </p>
+        <ErrorCarga mensaje={error} reintentar={reintentar} />
       ) : productos.length === 0 ? (
         <p role="status" className="notice">
           El catálogo todavía no tiene productos.

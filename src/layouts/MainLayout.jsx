@@ -1,7 +1,14 @@
-import { NavLink, Outlet } from 'react-router'
+import { useEffect } from 'react'
+import { tituloPagina } from '../utils/titulos.js'
+import { NavLink, Outlet, useLocation } from 'react-router'
 import MenuInventario from '../components/MenuInventario.jsx'
 
 function MainLayout() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    document.title = tituloPagina(pathname)
+  }, [pathname])
+
   return (
     <div className="app-layout">
       <a className="skip-link" href="#contenido">

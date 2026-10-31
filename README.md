@@ -11,6 +11,8 @@ SPA para consultar un catálogo de productos de un supermercado ficticio, incorp
 - Tabla de todos los artículos, incluidos aquellos sin stock.
 - Catálogo con búsqueda que ignora mayúsculas y tildes, filtro por categoría y actualización al incorporar artículos.
 - Menú secundario de inventario y conservación de la navegación inferior de Semana 1.
+- Títulos de pestaña según las seis situaciones de navegación.
+- Reintento explícito de productos y sucursales tras un fallo, sin recargar el documento.
 - Sucursales activas y formulario de contacto con validación sin envío.
 - Estilos responsivos con CSS propio y Tailwind CSS, conservando la identidad Despensa Verde.
 
@@ -24,7 +26,7 @@ Requiere Node.js **22.22.0 o superior** y npm. El entorno comprobado utiliza Nod
 
 ## Instalación y ejecución
 
-Desde la carpeta `DFE_II_supermercado` de la rama `semana-2`:
+Desde la carpeta `DFE_II_supermercado` de la rama `semana-3`:
 
 ```powershell
 npm ci
@@ -50,7 +52,7 @@ La vista previa se consulta en <http://127.0.0.1:4173/>. Este procedimiento sirv
 | `npm run lint`         | Revisión ESLint                                             |
 | `npm run format`       | Aplicar formato                                             |
 | `npm run format:check` | Comprobar formato                                           |
-| `npm test`             | 35 pruebas unitarias con el ejecutor incorporado de Node.js |
+| `npm test`             | 51 pruebas unitarias con el ejecutor incorporado de Node.js |
 | `npm run build`        | Generar producción en `dist/`                               |
 | `npm run preview`      | Revisar localmente la compilación                           |
 
@@ -115,7 +117,7 @@ No se implementan edición, eliminación, compras, ventas, movimientos de invent
 
 Repositorio: [Despensa Verde en GitHub](https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202).
 
-La rama `main` conserva la entrega de Semana 1. La continuidad funcional y visual de Semana 2 se desarrolla en `semana-2`.
+La rama `semana-1` conserva la entrega de Semana 1. La continuidad funcional y visual de Semana 2 se conserva en `semana-2`. Las mejoras de retroalimentación de Semana 1 se incorporan en `semana-3`; no constituyen la implementación de futuros requisitos académicos de Semana 3.
 
 Para un alojamiento con `BrowserRouter` se debe configurar la resolución de rutas SPA hacia `index.html` y revisar `base` si se publica bajo una subcarpeta.
 
@@ -130,9 +132,9 @@ npm run format:check
 npm run build
 ```
 
-Las 35 pruebas unitarias cubren los datos originales, validaciones, normalización, construcción de artículos y transiciones del reducer. Las comprobaciones de navegador se registran por separado y no forman parte de `npm test`; no existe una suite de navegador adicional instalada en el proyecto.
+Las 51 pruebas unitarias cubren los datos originales, validaciones, normalización, construcción de artículos, transiciones del reducer, títulos y control de reintentos. Las comprobaciones de navegador se registran por separado y no forman parte de `npm test`; no existe una suite de navegador adicional instalada en el proyecto.
 
-La última validación funcional registrada el 27 de octubre de 2026 incluye 35 pruebas unitarias, 35 comprobaciones de navegador en desarrollo y cinco de producción local, todas satisfactorias. Las nueve comparaciones visuales de las páginas originales y las seis demostraciones del efecto de utilidades están incluidas en las 35 comprobaciones de desarrollo.
+La validación histórica de Semana 2 registrada el 27 de octubre de 2026 incluye 35 pruebas unitarias, 35 comprobaciones de navegador en desarrollo y cinco de producción local, todas satisfactorias. Las nueve comparaciones visuales de las páginas originales y las seis demostraciones del efecto de utilidades están incluidas en las 35 comprobaciones de desarrollo.
 
 ### Semana 2
 
@@ -152,3 +154,9 @@ Los informes describen el estado y los resultados de cada etapa en su fecha de e
 - [Informe de implementación y comprobaciones](docs/informe-implementacion-semana-1.md).
 
 La validación manual de Semana 1 registró 18 pruebas aprobadas el 22 de octubre de 2026. Sus resultados y las comprobaciones técnicas anteriores se conservan en los documentos históricos; no se presentan como nuevas ejecuciones de Semana 2.
+
+### Mejoras de retroalimentación de Semana 1
+
+El layout actualiza el título con React Router. Productos y sucursales ofrecen «Reintentar» solo ante un error; durante la solicitud se muestra el estado de carga. Se bloquean solicitudes simultáneas, se cancelan cargas desmontadas y se descartan sus respuestas tardías. Una carga satisfactoria cierra la operación y evita reemplazar las altas en memoria.
+
+La comprobación del 31 de octubre de 2026 y la relación de archivos se documentan en el [informe de mejoras](docs/mejoras-retroalimentacion-semana-1.md). Las capturas históricas con identidad y encabezados anteriores se identifican en la sección I del informe de Semana 1; no se han reemplazado ni alterado sus resultados.

@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { validarSucursales } from '../utils/validarDatos.js'
+import { crearCargaJSON } from '../utils/cargaJSON.js'
 
 export function useSucursales() {
   const [estado, setEstado] = useState({
@@ -7,35 +8,31 @@ export function useSucursales() {
     cargando: true,
     error: '',
   })
+  const carga = useRef(null)
   useEffect(() => {
-    const controlador = new AbortController()
-    async function cargarSucursales() {
-      try {
-        const respuesta = await fetch(
-          `${import.meta.env.BASE_URL}data/sucursales.json`,
-          {
-            signal: controlador.signal,
-            headers: { Accept: 'application/json' },
-          },
-        )
-        if (!respuesta.ok) throw new Error('Respuesta HTTP inválida')
-        const sucursales = await respuesta.json()
-        if (!validarSucursales(sucursales)) throw new Error('Datos inválidos')
-        if (!controlador.signal.aborted)
-          setEstado({ sucursales, cargando: false, error: '' })
-      } catch {
-        if (!controlador.signal.aborted) {
-          setEstado({
-            sucursales: [],
-            cargando: false,
-            error:
-              'No pudimos cargar las sucursales. Recarga la página para intentarlo nuevamente.',
-          })
-        }
-      }
-    }
-    cargarSucursales()
-    return () => controlador.abort()
+    const operacion = crearCargaJSON({
+      url: `${import.meta.env.BASE_URL}data/sucursales.json`,
+      transformar: (datos) => {
+        if (!validarSucursales(datos)) throw new Error('Datos inválidos')
+        return datos
+      },
+      alIniciar: () => setEstado({ sucursales: [], cargando: true, error: '' }),
+      alCompletar: (sucursales) =>
+        setEstado({ sucursales, cargando: false, error: '' }),
+      alFallar: () =>
+        setEstado({
+          sucursales: [],
+          cargando: false,
+          error:
+            'No pudimos cargar las sucursales. Inténtalo nuevamente con el botón Reintentar.',
+        }),
+    })
+    carga.current = operacion
+    operacion.cargar()
+    return () => operacion.cancelar()
   }, [])
-  return estado
+  function reintentar() {
+    return carga.current?.cargar()
+  }
+  return { ...estado, reintentar }
 }

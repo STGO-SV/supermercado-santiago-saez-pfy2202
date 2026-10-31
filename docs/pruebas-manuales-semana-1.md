@@ -62,3 +62,7 @@ Se confirmó el funcionamiento de la navegación SPA, las tres rutas y la págin
 Se confirmó el manejo de errores de red y datos inválidos. Se restauraron los JSON originales y se desactivaron todos los bloqueos de solicitudes y Local Overrides. La comparación de huellas SHA256 se registra en el informe técnico.
 
 Las 18 pruebas manuales se mantienen diferenciadas de las 55 comprobaciones técnicas anteriores: 14 pruebas unitarias, 38 escenarios de navegador y tres controles de calidad de código. No constituyen una única suite automatizada. No se especificó la versión exacta del navegador utilizado en la ejecución manual.
+
+## Aclaración de versión del 31 de octubre de 2026
+
+Los resultados del 22 de octubre se conservan sin cambios. Las capturas históricas de `docs/evidencia/` incluyen textos e identidad intermedios, anteriores a «Despensa Verde» y al encabezado «Catálogo» de la entrega final. La procedencia de cada archivo se detalla en la sección I del [informe de Semana 1](informe-implementacion-semana-1.md). El protocolo original recupera las cargas mediante recarga; el reintento mediante botón se incorpora y verifica posteriormente, sin modificar los resultados anteriores.

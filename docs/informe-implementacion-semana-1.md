@@ -36,7 +36,7 @@ Rutas relativas a `C:\Dev\Duoc\DFEII\DFE_II_supermercado`:
 | Nuevos controles y documentación | `tests/validaciones.test.js`, `.gitattributes`, este informe, `docs/pruebas-manuales-semana-1.md` y evidencias actuales en `docs/evidencia/`                                 |
 | Conservados                      | Árbol de rutas en `src/App.jsx`, `src/main.jsx`, `src/pages/NoEncontrado.jsx`, configuración Vite, ESLint, Prettier, exclusiones y archivo de versiones instaladas           |
 
-La captura `docs/evidencia/etapa1-inicio.jpg` se conserva como evidencia histórica de la base; las capturas del catálogo, tiendas y contacto corresponden a esta implementación.
+La captura `docs/evidencia/etapa1-inicio.jpg` se conserva como evidencia histórica de la base. Las capturas del catálogo, tiendas y contacto corresponden a una versión intermedia de Semana 1 anterior al ajuste de identidad; su procedencia se aclara en la sección I.
 
 No se instalaron dependencias nuevas en esta etapa. Continúan React/React DOM 19.3.1, React Router 8.5.0, Vite instalado 8.3.5, ESLint 10.13.0, Prettier 3.9.10 y eslint-config-prettier 10.1.8. Los imports de enrutamiento corresponden al paquete instalado `react-router`. Node.js local: 24.11.0; el requisito documentado es >=22.22 por React Router.
 
@@ -179,3 +179,19 @@ Los archivos modificados para este cierre son `README.md`, `docs/pruebas-manuale
 El contenido local queda preparado para publicación pública en el repositorio previsto `supermercado-santiago-saez-pfy2202`. La creación del remoto y `git push` no se han ejecutado. No se genera un ZIP de entrega.
 
 No se detectaron defectos funcionales durante la revisión manual. Se conservan las limitaciones descritas: formulario sin recepción real, ausencia de despliegue público comprobado, falta de documentos oficiales originales y ausencia de certificación completa de accesibilidad. La siguiente operación pendiente es la autorización de publicación.
+
+## I. Aclaración documental del 31 de octubre de 2026
+
+La versión final de Semana 1, identificada en el historial por `4ba638d` y conservada en la rama `semana-1`, utiliza la identidad **Despensa Verde**. Los encabezados principales son «Catálogo», «Encuentra tu Despensa Verde más cercana» y «Estamos para ayudarte». La rama histórica conserva erratas en el texto de tiendas y en la descripción de contacto; su corrección en la copia de trabajo es posterior. Los títulos de pestaña dinámicos y el reintento sin recarga son mejoras posteriores a esa entrega.
+
+Las evidencias existentes se identifican según su contenido, sin sustituir imágenes ni alterar registros de resultados:
+
+| Evidencia                                 | Versión representada                                                                                                                                                      |
+| ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `evidencia/etapa1-inicio.jpg`             | Base de Etapa 1: identidad «Supermercado» y encabezado «Gestión de inventario del supermercado».                                                                          |
+| `evidencia/catalogo-1366.jpg`             | Versión intermedia con identidad «Aula Verde» y encabezado «El inventario, a la vista». No representa los textos finales de la entrega.                                   |
+| `evidencia/tiendas-768.jpg`               | Versión intermedia «Aula Verde», encabezado «Un espacio para cada comunidad» y direcciones demostrativas anteriores. No representa los textos ni las direcciones finales. |
+| `evidencia/contacto-375.jpg`              | Vista parcial y desplazada del formulario con redacción anterior; no permite verificar la cabecera ni acreditar el encabezado final.                                      |
+| `evidencia/comprobaciones-navegador.json` | Registro histórico de las comprobaciones consignadas. Se conserva sin cambios; no acredita una nueva ejecución sobre los textos de la entrega final.                      |
+
+Los recuentos, fechas y resultados de las secciones anteriores permanecen como registros históricos. Las referencias a publicación pendiente describen la situación de su fecha; la publicación posterior consta en el README. Esta aclaración no certifica una repetición de aquellas pruebas ni asigna retroactivamente las capturas a otra versión.

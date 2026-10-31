@@ -1,8 +1,9 @@
+import ErrorCarga from '../components/ErrorCarga.jsx'
 import FormularioArticulo from '../components/FormularioArticulo.jsx'
 import { useProductos } from '../hooks/useProductos.js'
 
 function IngresoArticulos() {
-  const { cargando, error } = useProductos()
+  const { cargando, error, reintentar } = useProductos()
   return (
     <section
       className="page-panel inventory-panel"
@@ -16,9 +17,7 @@ function IngresoArticulos() {
           Cargando productos…
         </p>
       ) : error ? (
-        <p role="alert" className="notice error-notice">
-          {error}
-        </p>
+        <ErrorCarga mensaje={error} reintentar={reintentar} />
       ) : (
         <FormularioArticulo />
       )}

@@ -1,8 +1,9 @@
+import ErrorCarga from '../components/ErrorCarga.jsx'
 import TablaInventario from '../components/TablaInventario.jsx'
 import { useProductos } from '../hooks/useProductos.js'
 
 function Inventario() {
-  const { productos, cargando, error } = useProductos()
+  const { productos, cargando, error, reintentar } = useProductos()
   return (
     <section className="page-panel" aria-labelledby="titulo-inventario">
       <p className="eyebrow">Inventario</p>
@@ -19,9 +20,7 @@ function Inventario() {
           Cargando productos…
         </p>
       ) : error ? (
-        <p role="alert" className="notice error-notice">
-          {error}
-        </p>
+        <ErrorCarga mensaje={error} reintentar={reintentar} />
       ) : productos.length === 0 ? (
         <p role="status" className="notice">
           El inventario todavía no tiene artículos.

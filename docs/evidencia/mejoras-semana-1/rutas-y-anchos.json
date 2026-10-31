@@ -1,0 +1,110 @@
+[
+  {
+    "ruta": "/",
+    "ancho": 375,
+    "contenido": 360,
+    "titulo": "Inicio | Despensa Verde"
+  },
+  {
+    "ruta": "/nuestras-tiendas",
+    "ancho": 375,
+    "contenido": 360,
+    "titulo": "Nuestras tiendas | Despensa Verde"
+  },
+  {
+    "ruta": "/contactanos",
+    "ancho": 375,
+    "contenido": 360,
+    "titulo": "Contáctanos | Despensa Verde"
+  },
+  {
+    "ruta": "/ingreso-articulos",
+    "ancho": 375,
+    "contenido": 360,
+    "titulo": "Ingreso de artículos | Despensa Verde"
+  },
+  {
+    "ruta": "/inventario",
+    "ancho": 375,
+    "contenido": 360,
+    "titulo": "Inventario | Despensa Verde"
+  },
+  {
+    "ruta": "/contactanos/no-existe",
+    "ancho": 375,
+    "contenido": 375,
+    "titulo": "Página no encontrada (404) | Despensa Verde"
+  },
+  {
+    "ruta": "/",
+    "ancho": 768,
+    "contenido": 753,
+    "titulo": "Inicio | Despensa Verde"
+  },
+  {
+    "ruta": "/nuestras-tiendas",
+    "ancho": 768,
+    "contenido": 753,
+    "titulo": "Nuestras tiendas | Despensa Verde"
+  },
+  {
+    "ruta": "/contactanos",
+    "ancho": 768,
+    "contenido": 753,
+    "titulo": "Contáctanos | Despensa Verde"
+  },
+  {
+    "ruta": "/ingreso-articulos",
+    "ancho": 768,
+    "contenido": 753,
+    "titulo": "Ingreso de artículos | Despensa Verde"
+  },
+  {
+    "ruta": "/inventario",
+    "ancho": 768,
+    "contenido": 753,
+    "titulo": "Inventario | Despensa Verde"
+  },
+  {
+    "ruta": "/contactanos/no-existe",
+    "ancho": 768,
+    "contenido": 768,
+    "titulo": "Página no encontrada (404) | Despensa Verde"
+  },
+  {
+    "ruta": "/",
+    "ancho": 1366,
+    "contenido": 1351,
+    "titulo": "Inicio | Despensa Verde"
+  },
+  {
+    "ruta": "/nuestras-tiendas",
+    "ancho": 1366,
+    "contenido": 1351,
+    "titulo": "Nuestras tiendas | Despensa Verde"
+  },
+  {
+    "ruta": "/contactanos",
+    "ancho": 1366,
+    "contenido": 1351,
+    "titulo": "Contáctanos | Despensa Verde"
+  },
+  {
+    "ruta": "/ingreso-articulos",
+    "ancho": 1366,
+    "contenido": 1351,
+    "titulo": "Ingreso de artículos | Despensa Verde"
+  },
+  {
+    "ruta": "/inventario",
+    "ancho": 1366,
+    "contenido": 1351,
+    "titulo": "Inventario | Despensa Verde"
+  },
+  {
+    "ruta": "/contactanos/no-existe",
+    "ancho": 1366,
+    "contenido": 1366,
+    "titulo": "Página no encontrada (404) | Despensa Verde"
+  }
+]

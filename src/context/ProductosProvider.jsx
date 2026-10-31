@@ -1,9 +1,10 @@
-import { useEffect, useReducer } from 'react'
+import { useEffect, useReducer, useRef } from 'react'
 import { ProductosContext } from './ProductosContext.js'
 import {
   estadoInicialProductos,
   productosReducer,
 } from '../reducers/productosReducer.js'
+import { crearCargaJSON } from '../utils/cargaJSON.js'
 import { crearArticulo, normalizarProductos } from '../utils/productos.js'
 
 function ProductosProvider({ children }) {
@@ -12,29 +13,24 @@ function ProductosProvider({ children }) {
     estadoInicialProductos,
   )
 
+  const carga = useRef(null)
   useEffect(() => {
-    const controlador = new AbortController()
-    async function cargarProductos() {
-      try {
-        const respuesta = await fetch(
-          `${import.meta.env.BASE_URL}data/productos.json`,
-          {
-            signal: controlador.signal,
-            headers: { Accept: 'application/json' },
-          },
-        )
-        if (!respuesta.ok) throw new Error('Respuesta HTTP inválida')
-        const productos = normalizarProductos(await respuesta.json())
-        if (!controlador.signal.aborted) {
-          dispatch({ type: 'CARGA_COMPLETADA', productos })
-        }
-      } catch {
-        if (!controlador.signal.aborted) dispatch({ type: 'CARGA_FALLIDA' })
-      }
-    }
-    cargarProductos()
-    return () => controlador.abort()
+    const operacion = crearCargaJSON({
+      url: `${import.meta.env.BASE_URL}data/productos.json`,
+      transformar: normalizarProductos,
+      alIniciar: () => dispatch({ type: 'CARGA_INICIADA' }),
+      alCompletar: (productos) =>
+        dispatch({ type: 'CARGA_COMPLETADA', productos }),
+      alFallar: () => dispatch({ type: 'CARGA_FALLIDA' }),
+    })
+    carga.current = operacion
+    operacion.cargar()
+    return () => operacion.cancelar()
   }, [])
+
+  function reintentar() {
+    return carga.current?.cargar()
+  }
 
   function agregarArticulo(campos) {
     if (estado.cargando || estado.error) {
@@ -50,7 +46,9 @@ function ProductosProvider({ children }) {
   }
 
   return (
-    <ProductosContext.Provider value={{ ...estado, agregarArticulo }}>
+    <ProductosContext.Provider
+      value={{ ...estado, agregarArticulo, reintentar }}
+    >
       {children}
     </ProductosContext.Provider>
   )

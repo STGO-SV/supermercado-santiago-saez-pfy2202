@@ -8,6 +8,9 @@ export const estadoInicialProductos = {
 
 export function productosReducer(estado, accion) {
   switch (accion.type) {
+    case 'CARGA_INICIADA':
+      if (estado.cargando || !estado.error) return estado
+      return { ...estado, cargando: true, error: '' }
     case 'CARGA_COMPLETADA':
       if (!estado.cargando || !validarProductosEstado(accion.productos)) {
         return estado
@@ -19,7 +22,7 @@ export function productosReducer(estado, accion) {
         productos: [],
         cargando: false,
         error:
-          'No pudimos cargar los productos. Recarga la página para intentarlo nuevamente.',
+          'No pudimos cargar los productos. Inténtalo nuevamente con el botón Reintentar.',
       }
     case 'AGREGAR_ARTICULO': {
       const producto = accion.producto

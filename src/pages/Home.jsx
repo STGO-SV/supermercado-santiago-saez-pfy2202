@@ -2,7 +2,7 @@ import CatalogoProductos from '../components/CatalogoProductos.jsx'
 import { useProductos } from '../hooks/useProductos.js'
 
 function Home() {
-  const { productos, cargando, error } = useProductos()
+  const { productos, cargando, error, reintentar } = useProductos()
   return (
     <>
       <section className="page-panel" aria-labelledby="titulo-inicio">
@@ -18,6 +18,7 @@ function Home() {
         productos={productos}
         cargando={cargando}
         error={error}
+        reintentar={reintentar}
       />
     </>
   )
