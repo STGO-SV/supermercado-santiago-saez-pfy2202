@@ -9,7 +9,7 @@ function NuestrasTiendas() {
     <>
       <section className="page-panel" aria-labelledby="titulo-tiendas">
         <p className="eyebrow">Nuestras tiendas</p>
-        <h1 id="titulo-tiendas">Ecuentra tu Despensa Verde más cercana</h1>
+        <h1 id="titulo-tiendas">Encuentra tu Despensa Verde más cercana</h1>
         <p>
           Conoce nuestras sucursales, sus direcciones y horarios de atención.
         </p>

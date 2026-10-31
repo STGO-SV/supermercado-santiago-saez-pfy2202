@@ -9,7 +9,7 @@ function Contactanos() {
       <p className="eyebrow">Contáctanos</p>
       <h1 id="titulo-contacto">Estamos para ayudarte</h1>
       <p>
-        Déjanos tus consultas, sugerencias y comentarios usando el fomulario a
+        Déjanos tus consultas, sugerencias y comentarios usando el formulario a
         continuación.
       </p>
       <FormularioContacto />
