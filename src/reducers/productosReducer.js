@@ -1,7 +1,10 @@
+import { moverUnidadesCarrito } from '../utils/carrito.js'
 import { validarProductosEstado } from '../utils/productos.js'
 
 export const estadoInicialProductos = {
   productos: [],
+  carrito: [],
+  avisoCarrito: null,
   cargando: true,
   error: '',
 }
@@ -15,15 +18,31 @@ export function productosReducer(estado, accion) {
       if (!estado.cargando || !validarProductosEstado(accion.productos)) {
         return estado
       }
-      return { productos: [...accion.productos], cargando: false, error: '' }
+      return {
+        ...estado,
+        productos: accion.productos.map((producto) => ({ ...producto })),
+        carrito: [],
+        avisoCarrito: null,
+        cargando: false,
+        error: '',
+      }
     case 'CARGA_FALLIDA':
       if (!estado.cargando) return estado
       return {
+        ...estado,
         productos: [],
+        carrito: [],
+        avisoCarrito: null,
         cargando: false,
         error:
           'No pudimos cargar los productos. Inténtalo nuevamente con el botón Reintentar.',
       }
+    case 'AGREGAR_AL_CARRITO':
+      return moverUnidadesCarrito(estado, accion, 1)
+    case 'INCREMENTAR_CARRITO':
+      return moverUnidadesCarrito(estado, accion, 1, true)
+    case 'DISMINUIR_CARRITO':
+      return moverUnidadesCarrito(estado, accion, -1, true)
     case 'AGREGAR_ARTICULO': {
       const producto = accion.producto
       if (

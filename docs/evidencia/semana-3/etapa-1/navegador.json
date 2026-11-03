@@ -1,0 +1,203 @@
+{
+  "fecha": "2026-11-03",
+  "entornos": ["Vite 127.0.0.1:5173", "Compilación local 127.0.0.1:4174"],
+  "escenarios": [
+    {
+      "nombre": "Inventario inicial",
+      "correcto": true,
+      "detalle": "Doce artículos y fila de encabezados"
+    },
+    {
+      "nombre": "Filtro de categoría",
+      "correcto": true,
+      "detalle": "Tres lácteos, incluido Yogur sin stock"
+    },
+    {
+      "nombre": "Agotados visibles",
+      "correcto": true,
+      "detalle": "El filtrado conserva el artículo agotado"
+    },
+    {
+      "nombre": "Restauración del listado",
+      "correcto": true,
+      "detalle": "Todas las categorías restaura doce artículos"
+    },
+    {
+      "nombre": "Detalle accesible y título",
+      "correcto": true,
+      "detalle": "El enlace activado con Enter abre /articulos/p01"
+    },
+    {
+      "nombre": "Incorporaciones consecutivas",
+      "correcto": true,
+      "detalle": "Dos incorporaciones producen 40 disponibles y dos reservadas"
+    },
+    {
+      "nombre": "Inventario sincronizado",
+      "correcto": true,
+      "detalle": "La tabla refleja el stock descontado"
+    },
+    {
+      "nombre": "Catálogo sincronizado",
+      "correcto": true,
+      "detalle": "Búsqueda de arroz muestra stock 40"
+    },
+    {
+      "nombre": "Validación de altas",
+      "correcto": true,
+      "detalle": "Formulario vacío conserva validación y foco en nombre"
+    },
+    {
+      "nombre": "Categoría derivada de un alta",
+      "correcto": true,
+      "detalle": "Granel aparece en el selector y muestra el nuevo artículo"
+    },
+    {
+      "nombre": "Detalle de alta",
+      "correcto": true,
+      "detalle": "El detalle resuelve el ID generado y la marca informada"
+    },
+    {
+      "nombre": "Última unidad y bloqueo",
+      "correcto": true,
+      "detalle": "Stock cero, una unidad en carrito y botón deshabilitado"
+    },
+    {
+      "nombre": "Alta agotada permanece visible",
+      "correcto": true,
+      "detalle": "El inventario conserva trece artículos, incluido el alta agotada"
+    },
+    {
+      "nombre": "Estado conservado durante navegación",
+      "correcto": true,
+      "detalle": "Regresar al detalle conserva las dos reservas previas"
+    },
+    {
+      "nombre": "Recarga sin persistencia",
+      "correcto": true,
+      "detalle": "La recarga restaura el stock inicial y vacía el carrito"
+    },
+    {
+      "nombre": "Detalle de agotado original",
+      "correcto": true,
+      "detalle": "Yogur muestra Sin stock sin permitir incorporación"
+    },
+    {
+      "nombre": "Artículo desconocido",
+      "correcto": true,
+      "detalle": "Mensaje específico y enlace de regreso sin operaciones"
+    },
+    {
+      "nombre": "Error de carga en detalle",
+      "correcto": true,
+      "detalle": "HTTP 503 muestra el error de carga sin confundirlo con ID inexistente"
+    },
+    {
+      "nombre": "Carga del reintento",
+      "correcto": true,
+      "detalle": "Durante el reintento aparece Cargando productos y no hay botón"
+    },
+    {
+      "nombre": "Segundo intento fallido",
+      "correcto": true,
+      "detalle": "El segundo HTTP 503 permite un nuevo intento"
+    },
+    {
+      "nombre": "Recuperación durante navegación",
+      "correcto": true,
+      "detalle": "El tercer intento recupera la semilla sin recargar al navegar del detalle a inventario"
+    },
+    {
+      "nombre": "Operaciones tras recuperar carga",
+      "correcto": true,
+      "detalle": "La recuperación habilita la incorporación sin duplicar la semilla"
+    },
+    {
+      "nombre": "Detalle adaptable 375",
+      "correcto": true,
+      "detalle": "Sin desbordamiento horizontal del documento"
+    },
+    {
+      "nombre": "Filtro y tabla adaptables 375",
+      "correcto": true,
+      "detalle": "Tres artículos y desplazamiento de tabla contenido"
+    },
+    {
+      "nombre": "Detalle adaptable 768",
+      "correcto": true,
+      "detalle": "Sin desbordamiento horizontal del documento"
+    },
+    {
+      "nombre": "Filtro y tabla adaptables 768",
+      "correcto": true,
+      "detalle": "Tres artículos y desplazamiento de tabla contenido"
+    },
+    {
+      "nombre": "Detalle adaptable 1366",
+      "correcto": true,
+      "detalle": "Sin desbordamiento horizontal del documento"
+    },
+    {
+      "nombre": "Filtro y tabla adaptables 1366",
+      "correcto": true,
+      "detalle": "Tres artículos y desplazamiento de tabla contenido"
+    },
+    {
+      "nombre": "Regresión de sucursales",
+      "correcto": true,
+      "detalle": "Tres sucursales activas y encabezado de página"
+    },
+    {
+      "nombre": "Regresión de contacto",
+      "correcto": true,
+      "detalle": "Formulario vacío conserva errores y validación sin envío"
+    },
+    {
+      "nombre": "Salto de teclado",
+      "correcto": true,
+      "detalle": "El enlace enfoca el contenido sin afectar la ruta"
+    },
+    {
+      "nombre": "Ruta incompleta 404",
+      "correcto": true,
+      "detalle": "/articulos sin identificador conserva la página 404"
+    },
+    {
+      "nombre": "Alcance de Etapa 1",
+      "correcto": true,
+      "detalle": "La página /carrito no se incorpora todavía"
+    }
+  ],
+  "medidas": [
+    {
+      "pagina": "detalle",
+      "ancho": 375,
+      "contenido": 360
+    },
+    {
+      "pagina": "inventario-filtrado",
+      "ancho": 375,
+      "contenido": 360
+    },
+    {
+      "pagina": "detalle",
+      "ancho": 768,
+      "contenido": 753
+    },
+    {
+      "pagina": "inventario-filtrado",
+      "ancho": 768,
+      "contenido": 753
+    },
+    {
+      "pagina": "detalle",
+      "ancho": 1366,
+      "contenido": 1351
+    },
+    {
+      "pagina": "inventario-filtrado",
+      "ancho": 1366,
+      "contenido": 1351
+    }
+  ]
+}

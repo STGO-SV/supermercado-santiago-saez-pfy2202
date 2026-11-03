@@ -1,9 +1,14 @@
+import { useState } from 'react'
+import FiltroCategoria from '../components/FiltroCategoria.jsx'
+import { obtenerCategorias, filtrarInventario } from '../utils/inventario.js'
 import ErrorCarga from '../components/ErrorCarga.jsx'
 import TablaInventario from '../components/TablaInventario.jsx'
 import { useProductos } from '../hooks/useProductos.js'
 
 function Inventario() {
   const { productos, cargando, error, reintentar } = useProductos()
+  const [categoria, setCategoria] = useState('')
+  const filtrados = filtrarInventario(productos, categoria)
   return (
     <section className="page-panel" aria-labelledby="titulo-inventario">
       <p className="eyebrow">Inventario</p>
@@ -26,7 +31,23 @@ function Inventario() {
           El inventario todavía no tiene artículos.
         </p>
       ) : (
-        <TablaInventario productos={productos} />
+        <>
+          <FiltroCategoria
+            categorias={obtenerCategorias(productos)}
+            categoria={categoria}
+            onChange={setCategoria}
+          />
+          <p role="status" className="result-count">
+            {filtrados.length} de {productos.length} artículos
+          </p>
+          {filtrados.length ? (
+            <TablaInventario productos={filtrados} />
+          ) : (
+            <p className="notice">
+              No hay artículos en la categoría seleccionada.
+            </p>
+          )}
+        </>
       )}
     </section>
   )

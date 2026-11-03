@@ -1,3 +1,4 @@
+import { Link } from 'react-router'
 import { formatoPrecio } from '../utils/formatoPrecio.js'
 
 function TablaInventario({ productos }) {
@@ -31,7 +32,11 @@ function TablaInventario({ productos }) {
           {productos.map((producto) => (
             <tr key={producto.id}>
               <td>{producto.id}</td>
-              <th scope="row">{producto.nombre}</th>
+              <th scope="row">
+                <Link to={`/articulos/${encodeURIComponent(producto.id)}`}>
+                  {producto.nombre}
+                </Link>
+              </th>
               <td>{producto.marca ?? 'Sin información'}</td>
               <td>{producto.tipo}</td>
               <td>{formatoPrecio(producto.precio)}</td>

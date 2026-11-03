@@ -1,17 +1,19 @@
 # Despensa Verde — Supermercado
 
-Proyecto académico de **Desarrollo Frontend II (PFY2202), Experiencia 1, Semanas 1 y 2, Forma B**.
+Proyecto académico de **Desarrollo Frontend II (PFY2202), Experiencia 1, Semanas 1 y 2 y Etapa 1 de Semana 3, Forma B**.
 
-SPA para consultar un catálogo de productos de un supermercado ficticio, incorporar artículos, revisar el inventario, conocer sus sucursales activas y validar un formulario de contacto demostrativo.
+SPA para consultar un catálogo de productos de un supermercado ficticio, incorporar artículos, revisar el inventario, consultar detalles, reservar unidades en un carrito en memoria, conocer sus sucursales activas y validar un formulario de contacto demostrativo.
 
 ## Funcionalidades
 
 - Estado global de productos mediante React Context y `useReducer`, compartido entre catálogo, ingreso de artículos e inventario.
 - Formulario de incorporación con nombre, marca, tipo o categoría, precio CLP y cantidad disponible.
-- Tabla de todos los artículos, incluidos aquellos sin stock.
+- Tabla de todos los artículos, incluidos aquellos sin stock, con filtro por categoría.
+- Detalle de artículo mediante `/articulos/:id`, con incorporación de una unidad al carrito.
+- Operaciones atómicas de carrito y existencias; la página visual del carrito queda pendiente para Etapa 2.
 - Catálogo con búsqueda que ignora mayúsculas y tildes, filtro por categoría y actualización al incorporar artículos.
 - Menú secundario de inventario y conservación de la navegación inferior de Semana 1.
-- Títulos de pestaña según las seis situaciones de navegación.
+- Títulos de pestaña según la ruta activa, incluido el detalle de artículos.
 - Reintento explícito de productos y sucursales tras un fallo, sin recargar el documento.
 - Sucursales activas y formulario de contacto con validación sin envío.
 - Estilos responsivos con CSS propio y Tailwind CSS, conservando la identidad Despensa Verde.
@@ -52,7 +54,7 @@ La vista previa se consulta en <http://127.0.0.1:4173/>. Este procedimiento sirv
 | `npm run lint`         | Revisión ESLint                                             |
 | `npm run format`       | Aplicar formato                                             |
 | `npm run format:check` | Comprobar formato                                           |
-| `npm test`             | 51 pruebas unitarias con el ejecutor incorporado de Node.js |
+| `npm test`             | 72 pruebas unitarias con el ejecutor incorporado de Node.js |
 | `npm run build`        | Generar producción en `dist/`                               |
 | `npm run preview`      | Revisar localmente la compilación                           |
 
@@ -82,7 +84,8 @@ docs/             Informes, protocolos y evidencias por semana y etapa
 | `/nuestras-tiendas`  | Sucursales activas                                                           |
 | `/contactanos`       | Formulario demostrativo                                                      |
 | `/ingreso-articulos` | Formulario de incorporación de artículos                                     |
-| `/inventario`        | Tabla de todos los productos del estado global                               |
+| `/inventario`        | Tabla filtrable de todos los productos del estado global                     |
+| `/articulos/:id`     | Detalle del artículo e incorporación al carrito                              |
 | Cualquier otra ruta  | Página 404 con regreso al inicio                                             |
 
 El menú inferior conserva Inicio, Nuestras tiendas y Contáctanos. El menú secundario permite abrir Ingresar artículos y Ver inventario. Ambos señalan su ruta activa; React Router gestiona los cambios sin recargar el documento.
@@ -101,9 +104,9 @@ Las sucursales se cargan y validan por separado desde `public/data/sucursales.js
 
 ## Tailwind CSS
 
-El plugin `@tailwindcss/vite` integra el framework con Vite. `src/tailwind.css` importa tema y utilidades con el prefijo `tw:`, sin activar Preflight. La detección de clases está limitada expresamente a `MenuInventario`, `FormularioArticulo` y `TablaInventario`.
+El plugin `@tailwindcss/vite` integra el framework con Vite. `src/tailwind.css` importa tema y utilidades con el prefijo `tw:`, sin activar Preflight. La detección de clases está limitada expresamente a `MenuInventario`, `FormularioArticulo`, `TablaInventario`, `FiltroCategoria` y `DetalleArticulo`.
 
-Las utilidades controlan la distribución y el espaciado del menú y formulario, la alineación adaptable del botón y el ancho y desplazamiento horizontal de la tabla. El CSS propio conserva colores, tipografía, estados activos, mensajes y foco visible. Las reglas sustituidas se retiraron de `inventario.css` para evitar conflictos de cascada; `index.css` permanece intacto.
+Las utilidades controlan la distribución y el espaciado del menú y formulario, la alineación adaptable del botón y el ancho y desplazamiento horizontal de la tabla, el filtro y la presentación del detalle. El CSS propio conserva colores, tipografía, estados activos, mensajes y foco visible. Las reglas sustituidas se retiraron de `inventario.css` para evitar conflictos de cascada; `index.css` permanece intacto.
 
 ## Alcance y límites
 
@@ -111,7 +114,7 @@ Los artículos incorporados no se escriben en el JSON ni se almacenan en `localS
 
 El formulario de contacto valida nombre, correo, asunto y mensaje; **no envía mensajes ni guarda la información**. Sus campos se reinician al abandonar la página.
 
-No se implementan edición, eliminación, compras, ventas, movimientos de inventario, autenticación ni servicios externos. La validación visual se realizó en Chrome sobre Windows; las comprobaciones de accesibilidad son parciales. No hay un despliegue configurado.
+No se implementan edición de artículos, eliminación de productos, finalización de compras, ventas, autenticación ni servicios externos. El carrito reserva y devuelve unidades en memoria; todavía no dispone de página visual propia. La validación visual se realizó en Chrome sobre Windows; las comprobaciones de accesibilidad son parciales. No hay un despliegue configurado.
 
 ## Repositorio
 
@@ -132,7 +135,7 @@ npm run format:check
 npm run build
 ```
 
-Las 51 pruebas unitarias cubren los datos originales, validaciones, normalización, construcción de artículos, transiciones del reducer, títulos y control de reintentos. Las comprobaciones de navegador se registran por separado y no forman parte de `npm test`; no existe una suite de navegador adicional instalada en el proyecto.
+Las 72 pruebas unitarias cubren los datos originales, validaciones, normalización, construcción de artículos, transiciones del reducer, títulos, control de reintentos, filtro de inventario, selección de artículos y conservación de unidades entre inventario y carrito. Las comprobaciones de navegador se registran por separado y no forman parte de `npm test`; no existe una suite de navegador adicional instalada en el proyecto.
 
 La validación histórica de Semana 2 registrada el 27 de octubre de 2026 incluye 35 pruebas unitarias, 35 comprobaciones de navegador en desarrollo y cinco de producción local, todas satisfactorias. Las nueve comparaciones visuales de las páginas originales y las seis demostraciones del efecto de utilidades están incluidas en las 35 comprobaciones de desarrollo.
 
@@ -160,3 +163,16 @@ La validación manual de Semana 1 registró 18 pruebas aprobadas el 22 de octubr
 El layout actualiza el título con React Router. Productos y sucursales ofrecen «Reintentar» solo ante un error; durante la solicitud se muestra el estado de carga. Se bloquean solicitudes simultáneas, se cancelan cargas desmontadas y se descartan sus respuestas tardías. Una carga satisfactoria cierra la operación y evita reemplazar las altas en memoria.
 
 La comprobación del 31 de octubre de 2026 y la relación de archivos se documentan en el [informe de mejoras](docs/mejoras-retroalimentacion-semana-1.md). Las capturas históricas con identidad y encabezados anteriores se identifican en la sección I del informe de Semana 1; no se han reemplazado ni alterado sus resultados.
+
+### Semana 3 Etapa 1
+
+El filtro de `/inventario` deriva sus categorías de todos los artículos actuales y no modifica la lista compartida. Cada nombre enlaza con `/articulos/:id`. El detalle presenta los atributos del artículo, su disponibilidad y las unidades reservadas; permite incorporar una unidad mientras exista stock. Los identificadores desconocidos muestran un estado específico y el detalle conserva carga, error y reintento.
+
+El estado añade `carrito: [{ productoId, cantidad }]` y `avisoCarrito`. El contexto expone `agregarAlCarrito`, `incrementarCantidad`, `disminuirCantidad` y `articulosCarrito` como información derivada. Agregar o incrementar descuenta existencias; disminuir las devuelve y elimina la línea al llegar a cero. El reducer valida cantidades e identificadores sobre el estado vigente. La suma de unidades disponibles y reservadas se conserva para cada artículo. Una recarga restaura la semilla y vacía el carrito.
+
+La comprobación del 3 de noviembre de 2026 comprende 72 pruebas unitarias aprobadas y 33 escenarios de navegador registrados por separado. Se mantienen `BrowserRouter`, las dependencias y la configuración de Vite. La página `/carrito` y los controles visuales de incremento y disminución corresponden a Etapa 2; las operaciones ya están implementadas y verificadas mediante pruebas unitarias.
+
+- [Arquitectura, archivos, pruebas, límites y pendientes de Etapa 1](docs/informe-semana-3-etapa-1.md).
+- [Resultados de navegador y medidas de las vistas nuevas](docs/evidencia/semana-3/etapa-1/navegador.json).
+
+Las mejoras de retroalimentación de Semana 1 se mantienen como antecedentes separados de estas nuevas funcionalidades sumativas. Los informes y evidencias históricos permanecen sin alteraciones.

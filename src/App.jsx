@@ -1,3 +1,4 @@
+import DetalleArticulo from './pages/DetalleArticulo.jsx'
 import { Route, Routes } from 'react-router'
 import MainLayout from './layouts/MainLayout.jsx'
 import Home from './pages/Home.jsx'
@@ -16,6 +17,7 @@ function App() {
         <Route path="contactanos" element={<Contactanos />} />
         <Route path="ingreso-articulos" element={<IngresoArticulos />} />
         <Route path="inventario" element={<Inventario />} />
+        <Route path="articulos/:id" element={<DetalleArticulo />} />
         <Route path="*" element={<NoEncontrado />} />
       </Route>
     </Routes>

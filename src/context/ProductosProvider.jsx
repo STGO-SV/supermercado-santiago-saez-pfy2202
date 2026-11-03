@@ -1,3 +1,4 @@
+import { obtenerArticulosCarrito } from '../utils/carrito.js'
 import { useEffect, useReducer, useRef } from 'react'
 import { ProductosContext } from './ProductosContext.js'
 import {
@@ -32,6 +33,18 @@ function ProductosProvider({ children }) {
     return carga.current?.cargar()
   }
 
+  function agregarAlCarrito(productoId, cantidad = 1) {
+    dispatch({ type: 'AGREGAR_AL_CARRITO', productoId, cantidad })
+  }
+
+  function incrementarCantidad(productoId, cantidad = 1) {
+    dispatch({ type: 'INCREMENTAR_CARRITO', productoId, cantidad })
+  }
+
+  function disminuirCantidad(productoId, cantidad = 1) {
+    dispatch({ type: 'DISMINUIR_CARRITO', productoId, cantidad })
+  }
+
   function agregarArticulo(campos) {
     if (estado.cargando || estado.error) {
       throw new Error('La carga del inventario no está disponible.')
@@ -47,7 +60,18 @@ function ProductosProvider({ children }) {
 
   return (
     <ProductosContext.Provider
-      value={{ ...estado, agregarArticulo, reintentar }}
+      value={{
+        ...estado,
+        agregarArticulo,
+        reintentar,
+        agregarAlCarrito,
+        incrementarCantidad,
+        disminuirCantidad,
+        articulosCarrito: obtenerArticulosCarrito(
+          estado.productos,
+          estado.carrito,
+        ),
+      }}
     >
       {children}
     </ProductosContext.Provider>

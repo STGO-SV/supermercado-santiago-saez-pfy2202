@@ -163,6 +163,8 @@ test('La carga completa establece la lista compartida y finaliza el estado de ca
   assert.equal(estado.error, '')
   assert.deepEqual(estadoInicialProductos, {
     productos: [],
+    carrito: [],
+    avisoCarrito: null,
     cargando: true,
     error: '',
   })
