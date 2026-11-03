@@ -1,0 +1,324 @@
+{
+  "fecha": "2026-11-03",
+  "entorno": "Vite 127.0.0.1:5173",
+  "escenarios": [
+    {
+      "nombre": "Doce controles iniciales − 0 +",
+      "correcto": true,
+      "detalle": "El DOM y la presentación parten del mismo orden"
+    },
+    {
+      "nombre": "Decrementos iniciales bloqueados",
+      "correcto": true,
+      "detalle": "Los doce contadores cero impiden disminuir"
+    },
+    {
+      "nombre": "Agotados iniciales",
+      "correcto": true,
+      "detalle": "Yogur y Lavalozas bloquean +"
+    },
+    {
+      "nombre": "Reservas desde catálogo",
+      "correcto": true,
+      "detalle": "Enter y Espacio reservan dos unidades sin cambiar operaciones"
+    },
+    {
+      "nombre": "Tab de − a + en catálogo",
+      "correcto": true,
+      "detalle": "Ambos botones habilitados siguen el orden del DOM"
+    },
+    {
+      "nombre": "Shift Tab de + a − en catálogo",
+      "correcto": true,
+      "detalle": "El recorrido inverso conserva el foco visible"
+    },
+    {
+      "nombre": "Catálogo adaptable 375",
+      "correcto": true,
+      "detalle": "Doce grupos − cantidad + sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Catálogo adaptable 768",
+      "correcto": true,
+      "detalle": "Doce grupos − cantidad + sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Catálogo adaptable 1366",
+      "correcto": true,
+      "detalle": "Doce grupos − cantidad + sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Carrito con etiqueta exterior",
+      "correcto": true,
+      "detalle": "Cantidad aparece fuera del grupo − 2 +"
+    },
+    {
+      "nombre": "Sincronización y total",
+      "correcto": true,
+      "detalle": "Las dos reservas del catálogo se mantienen"
+    },
+    {
+      "nombre": "Carrito adaptable 375",
+      "correcto": true,
+      "detalle": "Mismo orden sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Carrito adaptable 768",
+      "correcto": true,
+      "detalle": "Mismo orden sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Carrito adaptable 1366",
+      "correcto": true,
+      "detalle": "Mismo orden sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Tab de − a + en Carrito",
+      "correcto": true,
+      "detalle": "El orden de teclado coincide con el catálogo"
+    },
+    {
+      "nombre": "Incremento y total",
+      "correcto": true,
+      "detalle": "El incremento conserva stock y cálculo de importes"
+    },
+    {
+      "nombre": "Decremento y total",
+      "correcto": true,
+      "detalle": "Espacio devuelve una unidad"
+    },
+    {
+      "nombre": "Foco al vaciar Carrito",
+      "correcto": true,
+      "detalle": "Se mantiene la gestión de foco de la página"
+    },
+    {
+      "nombre": "Foco al llegar a cero en catálogo",
+      "correcto": true,
+      "detalle": "Al deshabilitar − el foco pasa a +"
+    },
+    {
+      "nombre": "Agotamiento desde catálogo",
+      "correcto": true,
+      "detalle": "Las doce unidades se reservan y + queda deshabilitado"
+    },
+    {
+      "nombre": "Foco al agotar catálogo",
+      "correcto": true,
+      "detalle": "Al deshabilitar +, − conserva un destino con foco visible"
+    },
+    {
+      "nombre": "Devolución y desbloqueo",
+      "correcto": true,
+      "detalle": "Se devuelve una unidad y + vuelve a habilitarse"
+    },
+    {
+      "nombre": "Total de reservas tras devolución",
+      "correcto": true,
+      "detalle": "Once unidades de $3.290 y una existencia adicional"
+    },
+    {
+      "nombre": "Foco al agotar Carrito",
+      "correcto": true,
+      "detalle": "El incremento de la última unidad conserva foco y cálculo"
+    },
+    {
+      "nombre": "Cambios del Carrito reflejados en catálogo",
+      "correcto": true,
+      "detalle": "El catálogo muestra las reservas actualizadas sin estado local"
+    }
+  ],
+  "medidas": [
+    {
+      "pagina": "catalogo",
+      "ancho": 375,
+      "contenido": 360,
+      "grupos": [
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        }
+      ]
+    },
+    {
+      "pagina": "catalogo",
+      "ancho": 768,
+      "contenido": 753,
+      "grupos": [
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        }
+      ]
+    },
+    {
+      "pagina": "catalogo",
+      "ancho": 1366,
+      "contenido": 1351,
+      "grupos": [
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        }
+      ]
+    },
+    {
+      "pagina": "carrito",
+      "ancho": 375,
+      "cabe": true,
+      "contenido": 360,
+      "orden": true
+    },
+    {
+      "pagina": "carrito",
+      "ancho": 768,
+      "cabe": true,
+      "contenido": 753,
+      "orden": true
+    },
+    {
+      "pagina": "carrito",
+      "ancho": 1366,
+      "cabe": true,
+      "contenido": 1351,
+      "orden": true
+    }
+  ],
+  "foco": {
+    "ancho": "2.4px",
+    "contorno": "solid",
+    "nombre": "Disminuir cantidad de Queso laminado 250 g"
+  }
+}

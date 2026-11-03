@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { useProductos } from '../hooks/useProductos.js'
 import { validarArticulo } from '../utils/validarArticulo.js'
 
+// La clave interna tipo conserva el alias de categoría del contrato existente.
 const camposIniciales = {
   nombre: '',
   marca: '',
@@ -11,11 +12,11 @@ const camposIniciales = {
   stock: '',
 }
 const camposFormulario = [
-  { name: 'nombre', label: 'Nombre', type: 'text' },
+  { name: 'nombre', label: 'Nombre del artículo', type: 'text' },
   { name: 'marca', label: 'Marca', type: 'text' },
-  { name: 'tipo', label: 'Tipo o categoría', type: 'text' },
-  { name: 'precio', label: 'Precio en CLP', type: 'number' },
-  { name: 'stock', label: 'Cantidad disponible', type: 'number' },
+  { name: 'tipo', label: 'Categoría', type: 'text' },
+  { name: 'precio', label: 'Precio por unidad en CLP', type: 'number' },
+  { name: 'stock', label: 'Cantidad disponible en unidades', type: 'number' },
 ]
 
 function FormularioArticulo() {
@@ -65,9 +66,10 @@ function FormularioArticulo() {
       aria-describedby="ayuda-articulo"
     >
       <p id="ayuda-articulo" className="notice tw:m-0">
-        Todos los campos son obligatorios. Precio y cantidad deben ser enteros
-        no negativos. Los artículos agregados se conservan durante la navegación
-        y se pierden al recargar la página.
+        Todos los campos son obligatorios. Los artículos se comercializan por
+        unidades. El precio por unidad en CLP y la cantidad disponible en
+        unidades deben ser enteros no negativos. Los artículos agregados se
+        conservan durante la navegación y se pierden al recargar la página.
       </p>
       {camposFormulario.map(({ name, label, type }) => (
         <div className="field" key={name}>

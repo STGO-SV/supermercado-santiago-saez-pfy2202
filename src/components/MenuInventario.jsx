@@ -22,6 +22,15 @@ function MenuInventario() {
             Ver inventario
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/carrito"
+            end
+            className="tw:inline-block tw:rounded-[0.4rem] tw:border-2 tw:border-solid tw:border-transparent tw:p-3 tw:font-[650] tw:underline-offset-[0.25em]"
+          >
+            Carrito
+          </NavLink>
+        </li>
       </ul>
     </nav>
   )

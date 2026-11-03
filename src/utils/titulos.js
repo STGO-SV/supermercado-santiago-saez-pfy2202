@@ -7,6 +7,7 @@ const secciones = [
   ['/ingreso-articulos', 'Ingreso de artículos'],
   ['/inventario', 'Inventario'],
   ['/articulos/:id', 'Detalle de artículo'],
+  ['/carrito', 'Carrito'],
 ]
 
 export function tituloPagina(pathname) {

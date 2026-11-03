@@ -9,3 +9,7 @@
 
 @source './components/FiltroCategoria.jsx';
 @source './pages/DetalleArticulo.jsx';
+
+@source './pages/Carrito.jsx';
+@source './components/LineaCarrito.jsx';
+@source './components/ControlesCantidad.jsx';

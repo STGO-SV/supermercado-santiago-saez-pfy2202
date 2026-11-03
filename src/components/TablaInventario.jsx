@@ -17,9 +17,9 @@ function TablaInventario({ productos }) {
               'Identificador',
               'Nombre',
               'Marca',
-              'Tipo / categoría',
-              'Precio CLP',
-              'Stock',
+              'Categoría',
+              'Precio por unidad (CLP)',
+              'Unidades disponibles',
               'Disponibilidad',
             ].map((titulo) => (
               <th key={titulo} scope="col">
@@ -38,7 +38,7 @@ function TablaInventario({ productos }) {
                 </Link>
               </th>
               <td>{producto.marca ?? 'Sin información'}</td>
-              <td>{producto.tipo}</td>
+              <td>{producto.categoria}</td>
               <td>{formatoPrecio(producto.precio)}</td>
               <td>{producto.stock}</td>
               <td>{producto.disponible ? 'Disponible' : 'Sin stock'}</td>

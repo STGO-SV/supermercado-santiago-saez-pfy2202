@@ -48,15 +48,15 @@ function DetalleArticulo() {
               <dd>{producto.marca ?? 'Sin información'}</dd>
             </div>
             <div>
-              <dt>Tipo / categoría</dt>
-              <dd>{producto.tipo}</dd>
+              <dt>Categoría</dt>
+              <dd>{producto.categoria}</dd>
             </div>
             <div>
-              <dt>Precio CLP</dt>
+              <dt>Precio por unidad (CLP)</dt>
               <dd>{formatoPrecio(producto.precio)}</dd>
             </div>
             <div>
-              <dt>Stock disponible</dt>
+              <dt>Unidades disponibles</dt>
               <dd>
                 {producto.stock} {producto.stock === 1 ? 'unidad' : 'unidades'}
               </dd>

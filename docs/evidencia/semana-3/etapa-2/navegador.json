@@ -1,0 +1,235 @@
+{
+  "fecha": "2026-11-03",
+  "entornos": ["Vite 127.0.0.1:5173", "Compilación local 127.0.0.1:4174"],
+  "escenarios": [
+    {
+      "nombre": "Inventario → Detalle → Carrito",
+      "correcto": true,
+      "detalle": "El acceso por teclado al detalle y el menú abren el carrito sin perder reservas"
+    },
+    {
+      "nombre": "Incorporación repetida",
+      "correcto": true,
+      "detalle": "Una línea de arroz, cantidad dos"
+    },
+    {
+      "nombre": "Subtotal inicial",
+      "correcto": true,
+      "detalle": "Dos unidades de $1.490 producen subtotal y total $2.980"
+    },
+    {
+      "nombre": "Dos artículos diferentes",
+      "correcto": true,
+      "detalle": "Dos líneas sin duplicación de atributos de producto"
+    },
+    {
+      "nombre": "Total de varias líneas",
+      "correcto": true,
+      "detalle": "Arroz $2.980 y fideos $990 suman $3.970"
+    },
+    {
+      "nombre": "Incremento desde carrito",
+      "correcto": true,
+      "detalle": "Arroz aumenta a tres; subtotal $4.470 y total $5.460"
+    },
+    {
+      "nombre": "Disminución y total",
+      "correcto": true,
+      "detalle": "Arroz vuelve a dos y el total a $3.970"
+    },
+    {
+      "nombre": "Devolución al inventario",
+      "correcto": true,
+      "detalle": "Tras incrementar y disminuir, arroz conserva 40 disponibles y dos reservadas"
+    },
+    {
+      "nombre": "Regresión del filtro de inventario",
+      "correcto": true,
+      "detalle": "Tres lácteos y fila de cabecera"
+    },
+    {
+      "nombre": "Catálogo sincronizado",
+      "correcto": true,
+      "detalle": "El catálogo conserva el stock actualizado"
+    },
+    {
+      "nombre": "Navegación SPA y ruta activa",
+      "correcto": true,
+      "detalle": "Las reservas se conservan al recorrer inventario, inicio y carrito"
+    },
+    {
+      "nombre": "Historial Atrás",
+      "correcto": true,
+      "detalle": "Atrás regresa a Inicio"
+    },
+    {
+      "nombre": "Historial Adelante",
+      "correcto": true,
+      "detalle": "Adelante recupera Carrito con las dos líneas"
+    },
+    {
+      "nombre": "Carrito con alta de sesión",
+      "correcto": true,
+      "detalle": "El alta de Avena aporta una unidad de $1.290"
+    },
+    {
+      "nombre": "Carrito adaptable 375",
+      "correcto": true,
+      "detalle": "Tres líneas, controles y navegación sin desbordamiento del documento"
+    },
+    {
+      "nombre": "Carrito adaptable 768",
+      "correcto": true,
+      "detalle": "Tres líneas, controles y navegación sin desbordamiento del documento"
+    },
+    {
+      "nombre": "Carrito adaptable 1366",
+      "correcto": true,
+      "detalle": "Tres líneas, controles y navegación sin desbordamiento del documento"
+    },
+    {
+      "nombre": "Agotamiento y bloqueo",
+      "correcto": true,
+      "detalle": "Dos unidades de Avena agotan el stock y recalculan el total"
+    },
+    {
+      "nombre": "Foco al agotar stock",
+      "correcto": true,
+      "detalle": "El foco pasa al decremento cuando el incremento se deshabilita"
+    },
+    {
+      "nombre": "Devolución y desbloqueo",
+      "correcto": true,
+      "detalle": "La devolución restaura una unidad disponible"
+    },
+    {
+      "nombre": "Eliminar línea al llegar a cero",
+      "correcto": true,
+      "detalle": "La línea de Avena desaparece y el total vuelve a $3.970"
+    },
+    {
+      "nombre": "Foco al eliminar última línea",
+      "correcto": true,
+      "detalle": "El foco pasa al decremento de la línea anterior"
+    },
+    {
+      "nombre": "Foco al eliminar primera línea",
+      "correcto": true,
+      "detalle": "El foco pasa a la siguiente línea"
+    },
+    {
+      "nombre": "Carrito vacío y total cero",
+      "correcto": true,
+      "detalle": "No quedan líneas ni controles de cantidad"
+    },
+    {
+      "nombre": "Foco del estado vacío",
+      "correcto": true,
+      "detalle": "La eliminación final enfoca el encabezado del estado vacío"
+    },
+    {
+      "nombre": "Conservación tras vaciar carrito",
+      "correcto": true,
+      "detalle": "Avena recupera dos unidades y arroz 42"
+    },
+    {
+      "nombre": "Enlace de carrito al detalle",
+      "correcto": true,
+      "detalle": "El enlace del nombre abre el detalle con sus reservas"
+    },
+    {
+      "nombre": "Recarga y acceso directo",
+      "correcto": true,
+      "detalle": "La ruta /carrito abre directamente y la recarga vacía las reservas"
+    },
+    {
+      "nombre": "Semilla restaurada",
+      "correcto": true,
+      "detalle": "Doce artículos iniciales; desaparece el alta temporal"
+    },
+    {
+      "nombre": "Error de carga del carrito",
+      "correcto": true,
+      "detalle": "HTTP 503 muestra error y reintento sin confundirlo con carrito vacío"
+    },
+    {
+      "nombre": "Estado durante reintento",
+      "correcto": true,
+      "detalle": "Se retira el botón y se informa la carga"
+    },
+    {
+      "nombre": "Segundo intento fallido",
+      "correcto": true,
+      "detalle": "Otro HTTP 503 conserva navegación y permite nuevo intento"
+    },
+    {
+      "nombre": "Recuperación de carga",
+      "correcto": true,
+      "detalle": "El tercer intento recupera inventario válido y carrito vacío sin recarga"
+    },
+    {
+      "nombre": "Operaciones tras recuperación",
+      "correcto": true,
+      "detalle": "La compilación local permite reservar e incrementar tras recuperar la carga"
+    },
+    {
+      "nombre": "Regresión de sucursales",
+      "correcto": true,
+      "detalle": "Tres sucursales activas y encabezado"
+    },
+    {
+      "nombre": "Contacto vacío y foco",
+      "correcto": true,
+      "detalle": "Validación existente con foco en el primer campo"
+    },
+    {
+      "nombre": "Contacto válido",
+      "correcto": true,
+      "detalle": "Se conserva la validación sin envío"
+    },
+    {
+      "nombre": "Salto al contenido",
+      "correcto": true,
+      "detalle": "El enlace de salto conserva el foco en main"
+    },
+    {
+      "nombre": "404 y selección de menú",
+      "correcto": true,
+      "detalle": "La subruta desconocida no marca Carrito como activo"
+    },
+    {
+      "nombre": "Foco visible en controles",
+      "correcto": true,
+      "detalle": "Tab alcanza el incremento con contorno visible"
+    },
+    {
+      "nombre": "Controles por teclado",
+      "correcto": true,
+      "detalle": "Enter incrementa y Espacio disminuye, conservando unidades y total"
+    },
+    {
+      "nombre": "Navegación inferior conservada",
+      "correcto": true,
+      "detalle": "Se mantienen Inicio, Nuestras tiendas y Contáctanos"
+    }
+  ],
+  "medidas": [
+    {
+      "ancho": 375,
+      "contenido": 360
+    },
+    {
+      "ancho": 768,
+      "contenido": 753
+    },
+    {
+      "ancho": 1366,
+      "contenido": 1351
+    }
+  ],
+  "foco": {
+    "ancho": "2.4px",
+    "estilo": "solid",
+    "nombre": "Aumentar cantidad de Arroz grano largo 1 kg"
+  }
+}

@@ -1,3 +1,4 @@
+import Carrito from './pages/Carrito.jsx'
 import DetalleArticulo from './pages/DetalleArticulo.jsx'
 import { Route, Routes } from 'react-router'
 import MainLayout from './layouts/MainLayout.jsx'
@@ -18,6 +19,7 @@ function App() {
         <Route path="ingreso-articulos" element={<IngresoArticulos />} />
         <Route path="inventario" element={<Inventario />} />
         <Route path="articulos/:id" element={<DetalleArticulo />} />
+        <Route path="carrito" element={<Carrito />} />
         <Route path="*" element={<NoEncontrado />} />
       </Route>
     </Routes>

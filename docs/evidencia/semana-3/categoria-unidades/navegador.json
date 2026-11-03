@@ -1,0 +1,173 @@
+{
+  "fecha": "2026-11-03",
+  "entorno": "Vite 127.0.0.1:5173",
+  "escenarios": [
+    {
+      "nombre": "Etiquetas claras",
+      "correcto": true,
+      "detalle": "Categoría comercial y venta por unidades explícitas"
+    },
+    {
+      "nombre": "Mensaje de categoría",
+      "correcto": true,
+      "detalle": "El error no utiliza Tipo o categoría"
+    },
+    {
+      "nombre": "Rechazo de stock -1",
+      "correcto": true,
+      "detalle": "Se bloquea el alta y se enfoca el campo de unidades"
+    },
+    {
+      "nombre": "Rechazo de stock 1.5",
+      "correcto": true,
+      "detalle": "Se bloquea el alta y se enfoca el campo de unidades"
+    },
+    {
+      "nombre": "Alta con stock entero",
+      "correcto": true,
+      "detalle": "Alta con categoría Despensa especial, precio unitario 1590 y dos unidades"
+    },
+    {
+      "nombre": "Categoría en filtro e inventario",
+      "correcto": true,
+      "detalle": "La nueva clasificación aparece en selector y tabla"
+    },
+    {
+      "nombre": "Detalle con categoría comercial",
+      "correcto": true,
+      "detalle": "El detalle muestra categoría, precio unitario y dos unidades disponibles"
+    },
+    {
+      "nombre": "Categoría en catálogo y filtro",
+      "correcto": true,
+      "detalle": "La tarjeta conserva nombre, categoría y precio por unidad"
+    },
+    {
+      "nombre": "Reserva por unidad",
+      "correcto": true,
+      "detalle": "Una presentación de 500 ml descuenta exactamente una unidad, no 500"
+    },
+    {
+      "nombre": "Agotamiento entero",
+      "correcto": true,
+      "detalle": "Dos reservas agotan las dos unidades y bloquean +"
+    },
+    {
+      "nombre": "Carrito por unidades",
+      "correcto": true,
+      "detalle": "Una unidad reservada coincide con el precio unitario sin conversiones de volumen"
+    },
+    {
+      "nombre": "Devolución de existencias",
+      "correcto": true,
+      "detalle": "El decremento desde Carrito devuelve ambas unidades al inventario"
+    },
+    {
+      "nombre": "Presentación histórica sin conversión",
+      "correcto": true,
+      "detalle": "El nombre 1 kg se conserva y la operación descuenta una unidad"
+    },
+    {
+      "nombre": "Históricos restaurados",
+      "correcto": true,
+      "detalle": "Arroz conserva nombre, precio y stock; Yogur mantiene su agotamiento inicial"
+    },
+    {
+      "nombre": "Concordancia de unidades",
+      "correcto": true,
+      "detalle": "Se distingue singular y plural sin cambiar las cantidades"
+    },
+    {
+      "nombre": "Formulario adaptable 375",
+      "correcto": true,
+      "detalle": "Etiquetas completas sin desbordamiento horizontal"
+    },
+    {
+      "nombre": "Inventario adaptable 375",
+      "correcto": true,
+      "detalle": "Nuevos encabezados dentro de la tabla con desplazamiento interno"
+    },
+    {
+      "nombre": "Detalle adaptable 375",
+      "correcto": true,
+      "detalle": "Categoría y unidades legibles"
+    },
+    {
+      "nombre": "Formulario adaptable 768",
+      "correcto": true,
+      "detalle": "Etiquetas completas sin desbordamiento horizontal"
+    },
+    {
+      "nombre": "Inventario adaptable 768",
+      "correcto": true,
+      "detalle": "Nuevos encabezados dentro de la tabla con desplazamiento interno"
+    },
+    {
+      "nombre": "Detalle adaptable 768",
+      "correcto": true,
+      "detalle": "Categoría y unidades legibles"
+    },
+    {
+      "nombre": "Formulario adaptable 1366",
+      "correcto": true,
+      "detalle": "Etiquetas completas sin desbordamiento horizontal"
+    },
+    {
+      "nombre": "Inventario adaptable 1366",
+      "correcto": true,
+      "detalle": "Nuevos encabezados dentro de la tabla con desplazamiento interno"
+    },
+    {
+      "nombre": "Detalle adaptable 1366",
+      "correcto": true,
+      "detalle": "Categoría y unidades legibles"
+    }
+  ],
+  "medidas": [
+    {
+      "pagina": "formulario",
+      "ancho": 375,
+      "contenido": 360
+    },
+    {
+      "pagina": "inventario",
+      "ancho": 375,
+      "contenido": 360
+    },
+    {
+      "pagina": "detalle",
+      "ancho": 375,
+      "contenido": 360
+    },
+    {
+      "pagina": "formulario",
+      "ancho": 768,
+      "contenido": 753
+    },
+    {
+      "pagina": "inventario",
+      "ancho": 768,
+      "contenido": 753
+    },
+    {
+      "pagina": "detalle",
+      "ancho": 768,
+      "contenido": 753
+    },
+    {
+      "pagina": "formulario",
+      "ancho": 1366,
+      "contenido": 1351
+    },
+    {
+      "pagina": "inventario",
+      "ancho": 1366,
+      "contenido": 1351
+    },
+    {
+      "pagina": "detalle",
+      "ancho": 1366,
+      "contenido": 1351
+    }
+  ]
+}

@@ -1,17 +1,19 @@
 # Despensa Verde — Supermercado
 
-Proyecto académico de **Desarrollo Frontend II (PFY2202), Experiencia 1, Semanas 1 y 2 y Etapa 1 de Semana 3, Forma B**.
+Proyecto académico de **Desarrollo Frontend II (PFY2202), Experiencia 1, Semanas 1 a 3, Forma B**.
 
 SPA para consultar un catálogo de productos de un supermercado ficticio, incorporar artículos, revisar el inventario, consultar detalles, reservar unidades en un carrito en memoria, conocer sus sucursales activas y validar un formulario de contacto demostrativo.
 
 ## Funcionalidades
 
 - Estado global de productos mediante React Context y `useReducer`, compartido entre catálogo, ingreso de artículos e inventario.
-- Formulario de incorporación con nombre, marca, tipo o categoría, precio CLP y cantidad disponible.
+- Formulario de incorporación con nombre del artículo, marca, categoría, precio por unidad en CLP y cantidad disponible en unidades.
 - Tabla de todos los artículos, incluidos aquellos sin stock, con filtro por categoría.
 - Detalle de artículo mediante `/articulos/:id`, con incorporación de una unidad al carrito.
-- Operaciones atómicas de carrito y existencias; la página visual del carrito queda pendiente para Etapa 2.
+- Carrito con cantidades, existencias adicionales, subtotales y total CLP calculados desde el estado compartido.
+- Controles de incremento y disminución con devolución de unidades, eliminación de líneas y gestión de foco.
 - Catálogo con búsqueda que ignora mayúsculas y tildes, filtro por categoría y actualización al incorporar artículos.
+- Controles directos `− 0 +` en cada tarjeta de Inicio, sincronizados con el carrito y el stock global.
 - Menú secundario de inventario y conservación de la navegación inferior de Semana 1.
 - Títulos de pestaña según la ruta activa, incluido el detalle de artículos.
 - Reintento explícito de productos y sucursales tras un fallo, sin recargar el documento.
@@ -48,15 +50,15 @@ La vista previa se consulta en <http://127.0.0.1:4173/>. Este procedimiento sirv
 
 ## Comandos
 
-| Comando                | Propósito                                                   |
-| ---------------------- | ----------------------------------------------------------- |
-| `npm run dev`          | Servidor de desarrollo                                      |
-| `npm run lint`         | Revisión ESLint                                             |
-| `npm run format`       | Aplicar formato                                             |
-| `npm run format:check` | Comprobar formato                                           |
-| `npm test`             | 72 pruebas unitarias con el ejecutor incorporado de Node.js |
-| `npm run build`        | Generar producción en `dist/`                               |
-| `npm run preview`      | Revisar localmente la compilación                           |
+| Comando                | Propósito                                                      |
+| ---------------------- | -------------------------------------------------------------- |
+| `npm run dev`          | Servidor de desarrollo                                         |
+| `npm run lint`         | Revisión ESLint                                                |
+| `npm run format`       | Aplicar formato                                                |
+| `npm run format:check` | Comprobar formato                                              |
+| `npm test`             | 104 pruebas automáticas con el ejecutor incorporado de Node.js |
+| `npm run build`        | Generar producción en `dist/`                                  |
+| `npm run preview`      | Revisar localmente la compilación                              |
 
 ## Estructura
 
@@ -78,15 +80,16 @@ docs/             Informes, protocolos y evidencias por semana y etapa
 
 ## Páginas
 
-| Ruta                 | Contenido                                                                    |
-| -------------------- | ---------------------------------------------------------------------------- |
-| `/`                  | Catálogo inicial de 12 productos y altas de la sesión; búsqueda y categorías |
-| `/nuestras-tiendas`  | Sucursales activas                                                           |
-| `/contactanos`       | Formulario demostrativo                                                      |
-| `/ingreso-articulos` | Formulario de incorporación de artículos                                     |
-| `/inventario`        | Tabla filtrable de todos los productos del estado global                     |
-| `/articulos/:id`     | Detalle del artículo e incorporación al carrito                              |
-| Cualquier otra ruta  | Página 404 con regreso al inicio                                             |
+| Ruta                 | Contenido                                                                         |
+| -------------------- | --------------------------------------------------------------------------------- |
+| `/`                  | Catálogo inicial de 12 productos y altas de la sesión; búsqueda y categorías      |
+| `/nuestras-tiendas`  | Sucursales activas                                                                |
+| `/contactanos`       | Formulario demostrativo                                                           |
+| `/ingreso-articulos` | Formulario de incorporación de artículos                                          |
+| `/inventario`        | Tabla filtrable de todos los productos del estado global                          |
+| `/articulos/:id`     | Detalle del artículo e incorporación al carrito                                   |
+| `/carrito`           | Cantidades, existencias adicionales, subtotales y total con controles de unidades |
+| Cualquier otra ruta  | Página 404 con regreso al inicio                                                  |
 
 El menú inferior conserva Inicio, Nuestras tiendas y Contáctanos. El menú secundario permite abrir Ingresar artículos y Ver inventario. Ambos señalan su ruta activa; React Router gestiona los cambios sin recargar el documento.
 
@@ -96,7 +99,7 @@ Los productos iniciales, precios, existencias, sucursales y direcciones son demo
 
 Se conservan los campos originales `id`, `nombre`, `categoria`, `precio`, `stock` y `disponible`, con soporte adicional para `marca` y `tipo`. En los doce registros originales, la marca se representa con `null` y la tabla muestra «Sin información». La transformación establece explícitamente `tipo = categoria`; no modifica el JSON ni inventa marcas.
 
-Las altas requieren los cinco campos del formulario. Los textos se recortan y no pueden estar vacíos; precio y cantidad deben ser enteros seguros no negativos. El tipo informado se asigna también a categoría. La disponibilidad se deriva de `stock > 0`, por lo que una cantidad cero se muestra como «Sin stock».
+Las altas requieren los cinco campos del formulario. Los textos se recortan y no pueden estar vacíos; precio y cantidad deben ser enteros seguros no negativos. La categoría informada se conserva en `categoria` y en su alias histórico `tipo`, conforme al contrato existente. La disponibilidad se deriva de `stock > 0`, por lo que una cantidad cero se muestra como «Sin stock».
 
 La incorporación utiliza el reducer con actualizaciones inmutables e identificadores únicos. Al completarse, el artículo aparece tanto en la tabla como en el catálogo y su categoría queda disponible en el filtro. Se controlan los estados de carga, error y lista vacía; el ingreso solo se habilita tras una carga inicial válida.
 
@@ -104,7 +107,7 @@ Las sucursales se cargan y validan por separado desde `public/data/sucursales.js
 
 ## Tailwind CSS
 
-El plugin `@tailwindcss/vite` integra el framework con Vite. `src/tailwind.css` importa tema y utilidades con el prefijo `tw:`, sin activar Preflight. La detección de clases está limitada expresamente a `MenuInventario`, `FormularioArticulo`, `TablaInventario`, `FiltroCategoria` y `DetalleArticulo`.
+El plugin `@tailwindcss/vite` integra el framework con Vite. `src/tailwind.css` importa tema y utilidades con el prefijo `tw:`, sin activar Preflight. La detección de clases está limitada expresamente a `MenuInventario`, `FormularioArticulo`, `TablaInventario`, `FiltroCategoria`, `DetalleArticulo`, `Carrito`, `LineaCarrito` y `ControlesCantidad`.
 
 Las utilidades controlan la distribución y el espaciado del menú y formulario, la alineación adaptable del botón y el ancho y desplazamiento horizontal de la tabla, el filtro y la presentación del detalle. El CSS propio conserva colores, tipografía, estados activos, mensajes y foco visible. Las reglas sustituidas se retiraron de `inventario.css` para evitar conflictos de cascada; `index.css` permanece intacto.
 
@@ -114,7 +117,7 @@ Los artículos incorporados no se escriben en el JSON ni se almacenan en `localS
 
 El formulario de contacto valida nombre, correo, asunto y mensaje; **no envía mensajes ni guarda la información**. Sus campos se reinician al abandonar la página.
 
-No se implementan edición de artículos, eliminación de productos, finalización de compras, ventas, autenticación ni servicios externos. El carrito reserva y devuelve unidades en memoria; todavía no dispone de página visual propia. La validación visual se realizó en Chrome sobre Windows; las comprobaciones de accesibilidad son parciales. No hay un despliegue configurado.
+No se implementan edición de artículos, eliminación de productos, finalización de compras, ventas, autenticación ni servicios externos. El carrito reserva y devuelve unidades en memoria desde su página propia, sin proceso de compra. La validación visual se realizó en Chrome sobre Windows; las comprobaciones de accesibilidad son parciales. No hay un despliegue configurado.
 
 ## Repositorio
 
@@ -135,7 +138,7 @@ npm run format:check
 npm run build
 ```
 
-Las 72 pruebas unitarias cubren los datos originales, validaciones, normalización, construcción de artículos, transiciones del reducer, títulos, control de reintentos, filtro de inventario, selección de artículos y conservación de unidades entre inventario y carrito. Las comprobaciones de navegador se registran por separado y no forman parte de `npm test`; no existe una suite de navegador adicional instalada en el proyecto.
+Las 104 pruebas automáticas cubren los datos originales, validaciones, normalización, construcción de artículos, transiciones del reducer, títulos, control de reintentos, filtro de inventario, selección de artículos y conservación de unidades entre inventario y carrito, cálculos exactos de importes y renderizado de la interfaz. Las comprobaciones de navegador se registran por separado y no forman parte de `npm test`; no existe una suite de navegador adicional instalada en el proyecto.
 
 La validación histórica de Semana 2 registrada el 27 de octubre de 2026 incluye 35 pruebas unitarias, 35 comprobaciones de navegador en desarrollo y cinco de producción local, todas satisfactorias. Las nueve comparaciones visuales de las páginas originales y las seis demostraciones del efecto de utilidades están incluidas en las 35 comprobaciones de desarrollo.
 
@@ -170,9 +173,45 @@ El filtro de `/inventario` deriva sus categorías de todos los artículos actual
 
 El estado añade `carrito: [{ productoId, cantidad }]` y `avisoCarrito`. El contexto expone `agregarAlCarrito`, `incrementarCantidad`, `disminuirCantidad` y `articulosCarrito` como información derivada. Agregar o incrementar descuenta existencias; disminuir las devuelve y elimina la línea al llegar a cero. El reducer valida cantidades e identificadores sobre el estado vigente. La suma de unidades disponibles y reservadas se conserva para cada artículo. Una recarga restaura la semilla y vacía el carrito.
 
-La comprobación del 3 de noviembre de 2026 comprende 72 pruebas unitarias aprobadas y 33 escenarios de navegador registrados por separado. Se mantienen `BrowserRouter`, las dependencias y la configuración de Vite. La página `/carrito` y los controles visuales de incremento y disminución corresponden a Etapa 2; las operaciones ya están implementadas y verificadas mediante pruebas unitarias.
+La comprobación del 3 de noviembre de 2026 comprende 72 pruebas unitarias aprobadas y 33 escenarios de navegador registrados por separado. Se mantienen `BrowserRouter`, las dependencias y la configuración de Vite. Al cierre de Etapa 1, la página `/carrito` y los controles visuales de incremento y disminución quedaban pendientes para Etapa 2. Su integración posterior se registra en la sección siguiente.
 
 - [Arquitectura, archivos, pruebas, límites y pendientes de Etapa 1](docs/informe-semana-3-etapa-1.md).
 - [Resultados de navegador y medidas de las vistas nuevas](docs/evidencia/semana-3/etapa-1/navegador.json).
 
 Las mejoras de retroalimentación de Semana 1 se mantienen como antecedentes separados de estas nuevas funcionalidades sumativas. Los informes y evidencias históricos permanecen sin alteraciones.
+
+### Semana 3 Etapa 2
+
+La página `/carrito` presenta cada artículo con enlace al detalle, precio unitario CLP, cantidad, subtotal y existencias adicionales. Los controles usan `incrementarCantidad` y `disminuirCantidad` del contexto existente. Al llegar a cero se elimina la línea y se devuelve el stock; sin existencias se bloquea el incremento. Se conserva el foco en un control disponible o en el encabezado del carrito vacío.
+
+Subtotales y total se calculan en cada render, sin añadir estado. La proyección utiliza `BigInt` para mantener importes exactos incluso cuando el producto de precio y cantidad supera el límite seguro de `Number`. Se reutiliza el formato CLP existente. El menú secundario incorpora Carrito y su título es «Carrito | Despensa Verde».
+
+La validación del 3 de noviembre de 2026 registra 84 pruebas automáticas aprobadas —72 existentes y 12 nuevas— y 42 escenarios de navegador satisfactorios. Las nuevas pruebas incluyen renderizado real de componentes mediante React DOM Server y Vite, sin bibliotecas adicionales. Las interacciones y la gestión de foco se verifican en navegador.
+
+- [Informe técnico de Etapa 2](docs/informe-semana-3-etapa-2.md).
+- [Protocolo de pruebas de Etapa 2](docs/pruebas-semana-3-etapa-2.md).
+- [Resultados y evidencias de navegador](docs/evidencia/semana-3/etapa-2/).
+
+Se conservan el reducer, el modelo de productos, `BrowserRouter`, las dependencias y la configuración de Vite. La publicación en GitHub Pages permanece pendiente de una fase posterior.
+
+### Carrito directo desde el catálogo
+
+Las tarjetas de Inicio reutilizan `ControlesCantidad` en una variante compacta con orden `− contador +`. El contador se deriva de las líneas del carrito; el incremento utiliza `agregarAlCarrito` y el decremento utiliza `disminuirCantidad`. No se almacenan cantidades locales ni se requiere navegar a Inventario o Detalle.
+
+El decremento se deshabilita en cero y el incremento al agotarse el stock. Se conservan nombres accesibles, anuncio de cantidad, foco visible y continuidad del foco al deshabilitar un botón. Los filtros y cambios de página mantienen las cantidades compartidas; recargar restablece el inventario inicial y los doce contadores cero.
+
+La comprobación previa a la uniformación del orden registró el 3 de noviembre de 2026 un total de 94 pruebas automáticas aprobadas —84 conservadas y diez nuevas— y 29 escenarios de navegador. Estos resultados corresponden al diseño anterior `+ contador −`. El [informe del ajuste](docs/ajuste-catalogo-carrito.md) describe los archivos afectados, la reutilización y los resultados. Las evidencias se guardan en `docs/evidencia/semana-3/catalogo-carrito/`; las de Etapa 2 permanecen sin cambios.
+
+### Categoría comercial y venta por unidades
+
+El formulario solicita «Categoría», «Precio por unidad en CLP» y «Cantidad disponible en unidades». Inventario y Detalle presentan la categoría comercial mediante `categoria`; las tarjetas indican «CLP por unidad». Todas las operaciones reservan y devuelven unidades enteras. Los pesos y volúmenes incluidos en nombres describen la presentación del producto.
+
+La semilla define `categoria`; el estado normalizado conserva `tipo` como alias de compatibilidad. No se añade un concepto de unidad de venta ni se migra el contrato. La validación mantiene el rechazo de existencias negativas o fraccionarias.
+
+La comprobación del ajuste de categoría y unidades, anterior a la uniformación del orden, registró el 3 de noviembre de 2026 un total de 102 pruebas automáticas aprobadas —94 conservadas y ocho nuevas— y 24 escenarios de navegador. El [informe de categoría y unidades](docs/ajuste-categoria-unidades.md) detalla los hallazgos, cambios y resultados. La revisión manual integral permanece pendiente desde la Prueba 5; estas comprobaciones específicas no sustituyen su continuación.
+
+### Orden uniforme de cantidad
+
+Catálogo y Carrito utilizan el mismo orden visual y de teclado `− cantidad +`. La variante compacta conserva únicamente el número visible; en Carrito la etiqueta «Cantidad» se muestra encima y fuera del grupo de botones. Se mantienen el contador derivado del contexto, los bloqueos y la gestión del foco.
+
+La validación del 3 de noviembre de 2026 registra 104 pruebas aprobadas —las 102 existentes con sus expectativas de presentación actualizadas y dos casos adicionales— y 25 comprobaciones nuevas de navegador. El [informe de uniformación](docs/uniformacion-controles-cantidad.md) distingue esta ejecución de los registros anteriores al cambio de orden. Las capturas y resultados históricos permanecen intactos.

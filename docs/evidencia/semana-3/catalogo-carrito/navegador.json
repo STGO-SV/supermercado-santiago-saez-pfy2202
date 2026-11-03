@@ -1,0 +1,327 @@
+{
+  "fecha": "2026-11-03",
+  "entorno": "Vite 127.0.0.1:5173",
+  "escenarios": [
+    {
+      "nombre": "Doce contadores iniciales",
+      "correcto": true,
+      "detalle": "Las doce tarjetas muestran cero desde el estado global"
+    },
+    {
+      "nombre": "Orden y decremento inicial",
+      "correcto": true,
+      "detalle": "Orden + 0 − y doce decrementos deshabilitados"
+    },
+    {
+      "nombre": "Agotados originales",
+      "correcto": true,
+      "detalle": "Yogur y Lavalozas bloquean el incremento"
+    },
+    {
+      "nombre": "Agregar desde Inicio",
+      "correcto": true,
+      "detalle": "Primera unidad sin visitar Inventario ni Detalle"
+    },
+    {
+      "nombre": "Incrementar desde Inicio",
+      "correcto": true,
+      "detalle": "Segunda unidad sobre la misma línea del carrito"
+    },
+    {
+      "nombre": "Devolver desde Inicio",
+      "correcto": true,
+      "detalle": "El decremento devuelve una unidad al stock"
+    },
+    {
+      "nombre": "Cantidad con búsqueda",
+      "correcto": true,
+      "detalle": "Filtrar por nombre conserva la reserva"
+    },
+    {
+      "nombre": "Cantidad tras retirar filtros",
+      "correcto": true,
+      "detalle": "La tarjeta remontada recupera la cantidad del contexto"
+    },
+    {
+      "nombre": "Reserva visible en Carrito",
+      "correcto": true,
+      "detalle": "La unidad reservada en catálogo aparece en Carrito"
+    },
+    {
+      "nombre": "Cambios de Carrito reflejados en Inicio",
+      "correcto": true,
+      "detalle": "El incremento de Carrito se refleja en la tarjeta"
+    },
+    {
+      "nombre": "Inventario sincronizado",
+      "correcto": true,
+      "detalle": "La tabla conserva el stock descontado"
+    },
+    {
+      "nombre": "Detalle sincronizado",
+      "correcto": true,
+      "detalle": "El detalle conserva las dos unidades"
+    },
+    {
+      "nombre": "Vaciar desde catálogo",
+      "correcto": true,
+      "detalle": "Enter y Espacio devuelven las dos unidades y bloquean −"
+    },
+    {
+      "nombre": "Foco al llegar a cero",
+      "correcto": true,
+      "detalle": "El foco pasa a + con contorno visible"
+    },
+    {
+      "nombre": "Incremento por teclado",
+      "correcto": true,
+      "detalle": "Enter agrega desde cero sin navegación"
+    },
+    {
+      "nombre": "Controles en alta nueva",
+      "correcto": true,
+      "detalle": "La tarjeta nueva muestra contador cero"
+    },
+    {
+      "nombre": "Última unidad desde catálogo",
+      "correcto": true,
+      "detalle": "La reserva agota stock, bloquea + y permite devolver"
+    },
+    {
+      "nombre": "Foco al agotar stock",
+      "correcto": true,
+      "detalle": "El foco pasa a − para evitar perder el control activo"
+    },
+    {
+      "nombre": "Devolución de alta nueva",
+      "correcto": true,
+      "detalle": "La devolución restaura stock y habilita +"
+    },
+    {
+      "nombre": "Controles adaptables 375",
+      "correcto": true,
+      "detalle": "Trece tarjetas; botones y contador sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Controles adaptables 768",
+      "correcto": true,
+      "detalle": "Trece tarjetas; botones y contador sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Controles adaptables 1366",
+      "correcto": true,
+      "detalle": "Trece tarjetas; botones y contador sin superposición ni desbordamiento"
+    },
+    {
+      "nombre": "Variante del carrito conservada",
+      "correcto": true,
+      "detalle": "El carrito mantiene el orden − Cantidad +"
+    },
+    {
+      "nombre": "Eliminación desde Carrito",
+      "correcto": true,
+      "detalle": "El decremento de la última unidad conserva el estado vacío"
+    },
+    {
+      "nombre": "Eliminación reflejada en tarjetas",
+      "correcto": true,
+      "detalle": "La eliminación del carrito restablece cero y bloquea − en catálogo"
+    },
+    {
+      "nombre": "Recarga restaura el catálogo",
+      "correcto": true,
+      "detalle": "Desaparece el alta temporal y regresan doce cantidades cero con stock inicial"
+    },
+    {
+      "nombre": "Regresión de sucursales",
+      "correcto": true,
+      "detalle": "Tres sucursales activas y encabezado"
+    },
+    {
+      "nombre": "Regresión de contacto",
+      "correcto": true,
+      "detalle": "Se conserva la validación del formulario"
+    },
+    {
+      "nombre": "Regresión de 404",
+      "correcto": true,
+      "detalle": "La ruta desconocida mantiene su título y contenido"
+    }
+  ],
+  "medidas": [
+    {
+      "ancho": 375,
+      "contenido": 360,
+      "controles": [
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        }
+      ]
+    },
+    {
+      "ancho": 768,
+      "contenido": 753,
+      "controles": [
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        }
+      ]
+    },
+    {
+      "ancho": 1366,
+      "contenido": 1351,
+      "controles": [
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        },
+        {
+          "cabe": true,
+          "orden": true
+        }
+      ]
+    }
+  ]
+}
