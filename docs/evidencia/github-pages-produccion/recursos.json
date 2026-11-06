@@ -1,0 +1,48 @@
+{
+  "fecha": "2026-11-06",
+  "entorno": "GitHub Pages remoto",
+  "commitAplicacion": "98e73310357c5c5164dfa522583fc85031c48f8c",
+  "respuestas": [
+    {
+      "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 629,
+      "sha256": "ecb9738807ec432a1681629dcb9bd6d894a6f184c1a88f9b71624879128bc585"
+    },
+    {
+      "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/assets/index-CANDGfHS.js",
+      "status": 200,
+      "contentType": "application/javascript; charset=utf-8",
+      "bytes": 288228,
+      "sha256": "b6e240b8b825c357ad5779488ae26f7c8ac7f3df0391d7dd498d2acce81cb878",
+      "identicoDistLocal": true
+    },
+    {
+      "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/assets/index-DfjG1C0q.css",
+      "status": 200,
+      "contentType": "text/css; charset=utf-8",
+      "bytes": 8970,
+      "sha256": "4d0ced42fd338e75043b0ab76fdbcf9940d1fc7abbe28dcc2e3620826d1b33da",
+      "identicoDistLocal": true
+    },
+    {
+      "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/data/productos.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 2175,
+      "sha256": "d30fc2a364d18beefd6ac90a89822b46b674625f4842410ed2607b2eb713a516",
+      "identicoDistLocal": true,
+      "registros": 12
+    },
+    {
+      "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/data/sucursales.json",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8",
+      "bytes": 809,
+      "sha256": "c670963905edf530790421a63dc3290dfdac830b219fb3d3e5ceaf62169a1036",
+      "identicoDistLocal": true,
+      "registros": 4
+    }
+  ]
+}

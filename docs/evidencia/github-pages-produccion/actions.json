@@ -1,0 +1,35 @@
+{
+  "fecha": "2026-11-06",
+  "commitAplicacion": "98e73310357c5c5164dfa522583fc85031c48f8c",
+  "run": {
+    "id": 42263109680,
+    "html_url": "https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202/actions/runs/42263109680",
+    "status": "completed",
+    "conclusion": "success"
+  },
+  "jobs": [
+    {
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202/actions/runs/42263109680/job/128047907711"
+    },
+    {
+      "name": "deploy",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202/actions/runs/42263109680/job/128048128823"
+    }
+  ],
+  "pages": {
+    "build_type": "workflow",
+    "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/",
+    "https_enforced": true
+  },
+  "ramasEntorno": [
+    {
+      "name": "main",
+      "type": "branch"
+    }
+  ]
+}

@@ -120,7 +120,7 @@ Los artículos incorporados no se escriben en el JSON ni se almacenan en `localS
 
 El formulario de contacto valida nombre, correo, asunto y mensaje; **no envía mensajes ni guarda la información**. Sus campos se reinician al abandonar la página.
 
-No se implementan edición de artículos, eliminación de productos, finalización de compras, ventas, autenticación ni servicios externos. El carrito reserva y devuelve unidades en memoria desde su página propia, sin proceso de compra. La validación visual se realizó en Chrome sobre Windows; las comprobaciones de accesibilidad son parciales. La configuración de GitHub Pages está preparada para revisión; todavía no se ha activado ni verificado una publicación remota.
+No se implementan edición de artículos, eliminación de productos, finalización de compras, ventas, autenticación ni servicios externos. El carrito reserva y devuelve unidades en memoria desde su página propia, sin proceso de compra. La validación visual se realizó en Chrome sobre Windows; las comprobaciones de accesibilidad son parciales. La publicación en GitHub Pages se verificó el 6 de noviembre de 2026; sus resultados remotos se registran separadamente de las comprobaciones locales anteriores.
 
 ## Repositorio
 
@@ -208,9 +208,9 @@ La compilación de producción utiliza la subruta `/supermercado-santiago-saez-p
 
 El workflow ejecuta pruebas automatizadas, ESLint, Prettier y compilación antes de publicar. Si alguna validación falla, se interrumpe el despliegue.
 
-**URL prevista:** https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/
+**URL pública comprobada:** https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/
 
-**Estado:** configuración preparada y validada localmente; publicación remota pendiente de activación y verificación.
+**Estado:** publicación verificada el 6 de noviembre de 2026, con los jobs `build` y `deploy` satisfactorios. La comprobación remota registra 32 escenarios y cinco recursos HTTP 200; no se suma a las 123 pruebas automatizadas ni a las ocho revisiones manuales anteriores.
 
 La aplicación no dispone de persistencia. Las reservas y artículos incorporados se pierden al recargar la página.
 

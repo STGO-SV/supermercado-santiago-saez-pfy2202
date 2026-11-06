@@ -9,9 +9,9 @@ Configurar el despliegue automatizado de Despensa Verde en GitHub Pages, conserv
 
 La publicación utiliza `main` como única fuente de código. Antes de cada despliegue se ejecutan las validaciones automatizadas y la compilación de producción.
 
-**URL prevista:** https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/
+**URL pública comprobada:** https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/
 
-La configuración ha sido validada localmente. La activación y comprobación del sitio remoto permanecen pendientes.
+La configuración está activa y el sitio remoto fue comprobado el 6 de noviembre de 2026. El cierre de publicación y sus evidencias se registran en la sección 10, separados de la preparación local de la sección 5.
 
 ## 2. Configuración de Vite
 
@@ -71,7 +71,7 @@ El proceso se divide en dos trabajos.
 5. Ejecutar `npm run lint`.
 6. Ejecutar `npm run format:check`.
 7. Ejecutar `npm run build`.
-8. Comprobar `git diff --check`.
+8. Comprobar `git diff --check` y `git diff --cached --check`.
 9. Preparar `dist/` como artefacto de GitHub Pages.
 
 Un fallo en las validaciones impide ejecutar el trabajo de publicación.
@@ -88,7 +88,7 @@ No se requiere una rama adicional `gh-pages` ni un token personal de acceso.
 
 ## 5. Validación local
 
-La preparación del despliegue fue sometida a las siguientes comprobaciones:
+La preparación inicial del despliegue, anterior a la incorporación de marcas y validaciones Unicode de las Etapas A y B, fue sometida a las siguientes comprobaciones:
 
 | Comprobación                  | Resultado                        |
 | ----------------------------- | -------------------------------- |
@@ -113,7 +113,7 @@ Los resultados anteriores no constituyen una verificación de la publicación re
 
 ## 6. Activación de GitHub Pages
 
-Para activar el despliegue:
+La fuente activa es **GitHub Actions**, con el entorno `github-pages` restringido exclusivamente a la rama `main`. Las acciones oficiales utilizadas están permitidas por la política existente, sin modificaciones de esa política ni eliminación de aprobaciones. El procedimiento reproducible es:
 
 1. Abrir **Settings → Pages** en el repositorio.
 2. Seleccionar **Build and deployment → Source: GitHub Actions**.
@@ -127,7 +127,7 @@ La opción de ejecución manual también estará disponible desde GitHub Actions
 
 ## 7. Verificación de la publicación
 
-Una vez completada la primera ejecución, se deberá comprobar en la URL pública:
+La verificación remota del 6 de noviembre de 2026 cubrió los siguientes aspectos. Deben revisarse de nuevo cuando una actualización afecte su comportamiento:
 
 - Carga correcta de la página principal y los recursos estáticos.
 - Acceso a los doce productos originales.
@@ -142,7 +142,7 @@ Una vez completada la primera ejecución, se deberá comprobar en la URL públic
 - Ausencia de errores inesperados en consola y Network.
 - Adaptación a resoluciones de 375, 768 y 1366 píxeles.
 
-La publicación se considerará verificada únicamente después de completar estas comprobaciones sobre el sitio remoto.
+La publicación se verificó mediante 32 comprobaciones de navegador sobre la URL remota y cinco respuestas HTTP 200 de recursos públicos, además del resultado satisfactorio de ambos jobs. No se atribuyen estos resultados a las ejecuciones locales anteriores.
 
 ## 8. Limitaciones
 
@@ -159,3 +159,31 @@ La publicación mediante GitHub Pages no modifica estas limitaciones funcionales
 - [Vite — Despliegue de sitios estáticos](https://vite.dev/guide/static-deploy#github-pages)
 - [GitHub — Workflows personalizados para Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 - [React Router — HashRouter](https://reactrouter.com/api/declarative-routers/HashRouter)
+
+## 10. Cierre de publicación del 6 de noviembre de 2026
+
+El commit funcional publicado y comprobado es `98e73310357c5c5164dfa522583fc85031c48f8c`, «feat: integrar entrega semana 3 y despliegue GitHub Pages». Integra Semana 3, las marcas demostrativas de Etapa A, la validación Unicode de Etapa B, el protocolo de ocho pruebas manuales y la configuración de despliegue. Se publicaron 21 archivos revisados con rutas explícitas; las auditorías y evidencias internas quedaron excluidas y no estaban previamente rastreadas.
+
+La [ejecución de publicación comprobada](https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202/actions/runs/42263109680) terminó con `build: success` y `deploy: success`. La fuente de Pages es `workflow`, HTTPS está activo y la única política de rama del entorno corresponde a `main`. Las referencias históricas `semana-1`, `semana-2` y `semana-3` se conservan.
+
+Antes de publicar se ejecutaron `npm ci`, `npm test`, `npm run lint`, `npm run format:check`, `npm run build`, `git diff --check` y `git diff --cached --check`. La batería registró 123 aprobadas y cero fallos, cancelaciones u omisiones; la compilación transformó 132 módulos. No se alteraron dependencias ni el archivo de bloqueo. El cierre documental posterior conserva el mismo código, semilla y recursos compilados; su commit se publica y se verifica de nuevo mediante el workflow de `main`. La revisión vigente del sitio corresponde al despliegue satisfactorio asociado al último commit publicado, consultable en [GitHub Actions de main](https://github.com/STGO-SV/supermercado-santiago-saez-pfy2202/actions?query=branch%3Amain).
+
+### Evidencias remotas
+
+- [Resultados de navegador](evidencia/github-pages-produccion/navegador.json): 32 comprobaciones remotas satisfactorias; no son otras 32 pruebas de `npm test`.
+- [Respuestas de recursos](evidencia/github-pages-produccion/recursos.json): HTML, JS, CSS, productos y sucursales con HTTP 200, tamaño y SHA256. Los recursos coinciden con `dist/` local de la versión funcional comprobada.
+- [Resultado de Actions y configuración](evidencia/github-pages-produccion/actions.json): commit, ejecución, jobs y restricción de rama verificados mediante la API de GitHub.
+- [Carrito remoto](evidencia/github-pages-produccion/carrito-remoto.png): dos arroces reservados, stock 40 y total $2.980.
+- [Catálogo remoto a 375 px](evidencia/github-pages-produccion/catalogo-remoto-375.png): controles, contenido y navegación en la publicación real.
+
+Se comprobaron doce productos y las cinco marcas en JSON/Inventario, marca y stock en Detalle, búsqueda sin tildes, filtros, conservación de reservas al navegar, incrementos/decrementos, totales, agotamiento y devolución. Un alta temporal válida produjo trece artículos y una segunda línea del carrito; los textos comerciales inválidos mostraron errores asociados y foco en el primer campo. La prueba de contacto utilizó datos ficticios y confirmó su validación demostrativa sin envío.
+
+Los enlaces directos `#/inventario`, `#/carrito` y `#/articulos/p01` conservaron la ruta tras recargar. Se restablecieron doce productos, stock 42 para arroz y carrito vacío; desapareció el alta temporal. La SPA resolvió su 404 y el título correspondiente. Se revisó Catálogo a 375, 768 y 1366 px, sin desbordamiento horizontal ni inversión del grupo de cantidad. La sesión de comprobación no registró errores ni advertencias de consola.
+
+Durante la primera activación, la URL respondió con el 404 del alojamiento mientras el despliegue seguía en curso. Se repitió el acceso después del éxito de Actions; no se registró esa respuesta transitoria como un resultado aprobado de la aplicación. Una aserción del procedimiento de prueba de contacto se corrigió para utilizar su ID real `contacto-nombre`; no fue necesario cambiar código de aplicación.
+
+### Observaciones pendientes y límites
+
+`npm ci` finalizó correctamente. `npm audit --json` informó cuatro alertas moderadas relacionadas con `minimatch` y la cadena de desarrollo de ESLint (`eslint`, `@eslint/js`, `@eslint/config-array`), sin alertas altas o críticas en ese resultado. La recomendación automática supone cambios mayores; no se ejecutó `audit fix --force`. La revisión de dependencias queda como mantenimiento posterior, sin modificar la versión entregada. Referencia del aviso: [GHSA-g3hv-75wg-m249](https://github.com/advisories/GHSA-g3hv-75wg-m249).
+
+La validación publicada no certifica accesibilidad exhaustiva ni todos los navegadores. Se mantienen los límites de estado en memoria, ausencia de backend y contacto sin recepción. No se modificaron informes históricos para aparentar una publicación anterior.

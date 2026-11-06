@@ -1,0 +1,157 @@
+{
+  "fecha": "2026-11-06",
+  "entorno": "GitHub Pages público, sin servidor local",
+  "url": "https://stgo-sv.github.io/supermercado-santiago-saez-pfy2202/",
+  "commitAplicacion": "98e73310357c5c5164dfa522583fc85031c48f8c",
+  "escenarios": [
+    {
+      "nombre": "Inicio remoto: doce productos y título",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Doce decrementos bloqueados y dos incrementos agotados",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Búsqueda sin distinguir tildes",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Filtro de categoría del catálogo",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Dos reservas desde catálogo reducen stock a 40",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Carrito conserva una línea, dos unidades y total 2980",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Incremento actualiza total a 4470 y stock a 39",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Decremento restablece total a 2980",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Seguir comprando conserva cantidad en Inicio",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Inventario remoto presenta doce artículos y cinco marcas",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Filtro de inventario conserva agotados",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Detalle por HashRouter muestra marca y stock sincronizados",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Unicode inválido: tres errores asociados y foco",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Alta Unicode válida confirmada en producción",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Alta aparece en catálogo y categoría disponible",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Última unidad bloquea incremento",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Dos productos y total remoto 4270",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Devolución elimina línea y restablece total 2980",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Tres sucursales activas cargadas remotamente",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Contacto vacío: cuatro errores y foco",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Contacto válido demuestra validación sin envío",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "404 de SPA y título",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Acceso directo y recarga de #/inventario",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Acceso directo y recarga de #/carrito",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Acceso directo y recarga de #/articulos/p01",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga restablece stock inicial",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga vacía carrito y total",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga elimina alta temporal y restaura doce productos",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Catálogo responsivo remoto a 375 px",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Catálogo responsivo remoto a 768 px",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Catálogo responsivo remoto a 1366 px",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Consola remota sin errores ni advertencias",
+      "resultado": "satisfactorio"
+    }
+  ],
+  "medidas": [
+    {
+      "ancho": 375,
+      "contenido": 360,
+      "orden": true,
+      "scroll": 360
+    },
+    {
+      "ancho": 768,
+      "contenido": 753,
+      "orden": true,
+      "scroll": 753
+    },
+    {
+      "ancho": 1366,
+      "contenido": 1351,
+      "orden": true,
+      "scroll": 1351
+    }
+  ],
+  "consola": []
+}
