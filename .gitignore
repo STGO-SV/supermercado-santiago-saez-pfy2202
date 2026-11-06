@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Documentación interna de desarrollo y auditoría
+/docs/auditoria-documental-*.md
+/docs/auditoria-retroalimentacion-*.md
+/docs/auditoria-implementacion-etapa-b.md
+/docs/evidencia/auditoria-documental/

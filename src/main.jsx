@@ -1,18 +1,18 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter } from 'react-router'
 import './tailwind.css'
 import './index.css'
 import './inventario.css'
 import App from './App.jsx'
 import ProductosProvider from './context/ProductosProvider.jsx'
+import EnrutadorAplicacion from './components/EnrutadorAplicacion.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <EnrutadorAplicacion>
       <ProductosProvider>
         <App />
       </ProductosProvider>
-    </BrowserRouter>
+    </EnrutadorAplicacion>
   </StrictMode>,
 )

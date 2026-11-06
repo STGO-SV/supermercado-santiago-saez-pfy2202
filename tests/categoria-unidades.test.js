@@ -171,7 +171,7 @@ test('La normalización conserva las doce presentaciones históricas, precios y 
   }
 })
 
-test('Inventario y detalle muestran categoría y precio por unidad sin la etiqueta ambigua', () => {
+test('Inventario y detalle muestran categoría, marca y precio por unidad con fallback histórico', () => {
   const producto = crearArticulo(campos, 'prueba-unidades')
   const estado = productosReducer(cargar(), {
     type: 'AGREGAR_ARTICULO',
@@ -184,6 +184,10 @@ test('Inventario y detalle muestran categoría y precio por unidad sin la etique
   assert.ok(tabla.includes('Precio por unidad (CLP)</th>'))
   assert.ok(tabla.includes('Unidades disponibles</th>'))
   assert.ok(tabla.includes('<td>Despensa especial</td>'))
+  for (const marca of new Set(datos.map((articulo) => articulo.marca))) {
+    assert.ok(tabla.includes(`<td>${marca}</td>`))
+  }
+  assert.ok(!tabla.includes('Sin información'))
   const detalle = representar(
     DetalleArticulo,
     estado,
@@ -194,8 +198,40 @@ test('Inventario y detalle muestran categoría y precio por unidad sin la etique
   assert.ok(detalle.includes('<dt>Categoría</dt><dd>Despensa especial</dd>'))
   assert.ok(detalle.includes('<dt>Precio por unidad (CLP)</dt>'))
   assert.ok(detalle.includes('<dt>Unidades disponibles</dt>'))
+  assert.ok(detalle.includes('<dt>Marca</dt><dd>Marca de prueba</dd>'))
   assert.ok(!tabla.includes('Tipo / categoría'))
   assert.ok(!detalle.includes('Tipo / categoría'))
+  for (const articulo of estado.productos.slice(0, 12)) {
+    const vista = representar(
+      DetalleArticulo,
+      estado,
+      {},
+      `/articulos/${articulo.id}`,
+      '/articulos/:id',
+    )
+    assert.ok(vista.includes(`<dt>Marca</dt><dd>${articulo.marca}</dd>`))
+  }
+  const sinMarca = { ...datos[0] }
+  delete sinMarca.marca
+  const historicos = normalizarProductos([
+    sinMarca,
+    { ...datos[1], marca: null },
+  ])
+  const estadoHistorico = { ...estado, productos: historicos, carrito: [] }
+  const tablaHistorica = representar(TablaInventario, estadoHistorico, {
+    productos: historicos,
+  })
+  assert.equal(tablaHistorica.split('<td>Sin información</td>').length - 1, 2)
+  for (const articulo of historicos) {
+    const vista = representar(
+      DetalleArticulo,
+      estadoHistorico,
+      {},
+      `/articulos/${articulo.id}`,
+      '/articulos/:id',
+    )
+    assert.ok(vista.includes('<dt>Marca</dt><dd>Sin información</dd>'))
+  }
 })
 
 test('El alta añade una categoría a ambos filtros y aparece en el catálogo con precio por unidad', () => {

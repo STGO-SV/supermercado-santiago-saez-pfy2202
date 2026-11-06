@@ -1,16 +1,13 @@
 import { validarProductos } from './validarDatos.js'
 import { validarArticulo } from './validarArticulo.js'
-
-function textoValido(valor) {
-  return typeof valor === 'string' && valor.trim().length > 0
-}
+import { textoValido, textoProductoValido } from './texto.js'
 
 export function validarProductosEstado(productos) {
   return (
     validarProductos(productos) &&
     productos.every(
       (producto) =>
-        (producto.marca === null || textoValido(producto.marca)) &&
+        (producto.marca === null || textoProductoValido(producto.marca)) &&
         producto.tipo === producto.categoria,
     )
   )
@@ -18,7 +15,7 @@ export function validarProductosEstado(productos) {
 
 export function normalizarProductos(datos) {
   if (!validarProductos(datos)) throw new Error('Datos de productos inválidos')
-  // El tipo representa la categoría; la semilla no informa marcas.
+  // El tipo representa la categoría; se conservan marcas informadas y ausencias históricas.
   const productos = datos.map((producto) => ({
     ...producto,
     marca: producto.marca === undefined ? null : producto.marca,

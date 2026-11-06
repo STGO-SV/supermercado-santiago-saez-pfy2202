@@ -1,0 +1,149 @@
+{
+  "fecha": "2026-11-03",
+  "entorno": "Solo localhost; GitHub Pages y Actions sin activar ni verificar",
+  "produccionLocal": [
+    {
+      "nombre": "Catálogo compilado: doce productos y título",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Catálogo a carrito conserva reserva y stock",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Título de carrito",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Seguir comprando conserva reserva",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Historial atrás vuelve a carrito",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Historial adelante vuelve al catálogo",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Inventario muestra stock reservado y título",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Filtro de inventario",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Detalle dinámico accesible desde inventario",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Agregar desde detalle descuenta otra unidad",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga de detalle mantiene ruta y restaura stock inicial",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Salto de contenido no modifica hash y enfoca main",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Formulario y título en producción local",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Alta temporal de artículo",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Alta aparece en catálogo sin recarga",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Stock cero bloquea incremento",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Devolver unidad habilita incremento",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Sucursales JSON y título",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Contacto y título tras navegación completada",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "404 y título",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga de 404 conserva ruta",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Carrito vacío y acceso al catálogo",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Seguir comprando desde vacío vuelve a catálogo inicial",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga directa de inventario",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga directa de ingreso-articulos",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Recarga directa de carrito",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Consola de producción local",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Organización final: producción mantiene hash y carrito",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Organización final: reserva y stock sincronizados",
+      "resultado": "satisfactorio"
+    }
+  ],
+  "desarrollo": [
+    {
+      "nombre": "Desarrollo: catálogo inicial sin hash",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Desarrollo: carrito sin hash conserva reserva",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Desarrollo: Seguir comprando conserva cantidad",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Desarrollo: salto al contenido conserva ruta",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Desarrollo: recarga interna conserva ruta y vacía carrito",
+      "resultado": "satisfactorio"
+    },
+    {
+      "nombre": "Organización final: desarrollo mantiene BrowserRouter",
+      "resultado": "satisfactorio"
+    }
+  ],
+  "consolaProduccion": []
+}

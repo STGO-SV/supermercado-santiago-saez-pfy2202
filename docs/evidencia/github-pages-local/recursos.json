@@ -1,0 +1,34 @@
+[
+  {
+    "url": "http://127.0.0.1:4173/supermercado-santiago-saez-pfy2202/",
+    "status": 200,
+    "contentType": "text/html",
+    "bytes": 629
+  },
+  {
+    "url": "http://127.0.0.1:4173/supermercado-santiago-saez-pfy2202/assets/index-CX6yZAOD.js",
+    "status": 200,
+    "contentType": "text/javascript",
+    "bytes": 287884
+  },
+  {
+    "url": "http://127.0.0.1:4173/supermercado-santiago-saez-pfy2202/assets/index-DfjG1C0q.css",
+    "status": 200,
+    "contentType": "text/css",
+    "bytes": 8970
+  },
+  {
+    "url": "http://127.0.0.1:4173/supermercado-santiago-saez-pfy2202/data/productos.json",
+    "status": 200,
+    "contentType": "application/json",
+    "bytes": 1830,
+    "registros": 12
+  },
+  {
+    "url": "http://127.0.0.1:4173/supermercado-santiago-saez-pfy2202/data/sucursales.json",
+    "status": 200,
+    "contentType": "application/json",
+    "bytes": 809,
+    "registros": 4
+  }
+]

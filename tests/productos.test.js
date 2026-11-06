@@ -34,6 +34,13 @@ const agregar = (estado, producto) =>
   productosReducer(estado, { type: 'AGREGAR_ARTICULO', producto })
 
 test('La normalización conserva los atributos originales sin modificar la semilla', () => {
+  const marcasPorCategoria = {
+    Abarrotes: 'Campo Claro',
+    Lácteos: 'Valle Blanco',
+    Bebidas: 'Fuente Viva',
+    Limpieza: 'Brillo Sur',
+    Higiene: 'Cuidado Austral',
+  }
   const copia = structuredClone(semilla)
   const productos = normalizarProductos(semilla)
   assert.deepEqual(semilla, copia)
@@ -41,7 +48,10 @@ test('La normalización conserva los atributos originales sin modificar la semil
   for (const [indice, producto] of productos.entries()) {
     for (const campo of Object.keys(semilla[indice]))
       assert.equal(producto[campo], semilla[indice][campo])
-    assert.equal(producto.marca, null)
+    assert.equal(typeof semilla[indice].marca, 'string')
+    assert.ok(semilla[indice].marca.trim().length > 0)
+    assert.equal(producto.marca, semilla[indice].marca)
+    assert.equal(producto.marca, marcasPorCategoria[producto.categoria])
     assert.equal(producto.tipo, producto.categoria)
     assert.notEqual(producto, semilla[indice])
   }
@@ -66,12 +76,22 @@ test('La normalización rechaza registros inválidos, IDs repetidos y marcas inv
   }
 })
 
-test('La normalización es idempotente y conserva una marca informada', () => {
+test('La normalización es idempotente, conserva marcas y admite ausencias históricas', () => {
   const productos = normalizarProductos([
     { ...semilla[0], marca: 'Marca de prueba' },
   ])
   assert.deepEqual(normalizarProductos(productos), productos)
   assert.equal(productos[0].marca, 'Marca de prueba')
+  const sinMarca = { ...semilla[0] }
+  delete sinMarca.marca
+  for (const historico of [sinMarca, { ...semilla[0], marca: null }]) {
+    const copia = structuredClone(historico)
+    const normalizados = normalizarProductos([historico])
+    assert.equal(normalizados[0].marca, null)
+    assert.equal(validarProductosEstado(normalizados), true)
+    assert.deepEqual(normalizarProductos(normalizados), normalizados)
+    assert.deepEqual(historico, copia)
+  }
 })
 
 test('El modelo compartido rechaza tipo contradictorio y marca ausente', () => {

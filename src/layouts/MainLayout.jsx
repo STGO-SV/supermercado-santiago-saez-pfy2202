@@ -1,9 +1,10 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { tituloPagina } from '../utils/titulos.js'
 import { NavLink, Outlet, useLocation } from 'react-router'
 import MenuInventario from '../components/MenuInventario.jsx'
 
 function MainLayout() {
+  const contenido = useRef(null)
   const { pathname } = useLocation()
   useEffect(() => {
     document.title = tituloPagina(pathname)
@@ -11,7 +12,14 @@ function MainLayout() {
 
   return (
     <div className="app-layout">
-      <a className="skip-link" href="#contenido">
+      <a
+        className="skip-link"
+        href="#contenido"
+        onClick={(evento) => {
+          evento.preventDefault()
+          contenido.current?.focus()
+        }}
+      >
         Saltar al contenido
       </a>
       <header className="site-header">
@@ -21,7 +29,12 @@ function MainLayout() {
         </div>
       </header>
       <MenuInventario />
-      <main id="contenido" className="container main-content" tabIndex={-1}>
+      <main
+        ref={contenido}
+        id="contenido"
+        className="container main-content"
+        tabIndex={-1}
+      >
         <Outlet />
       </main>
       <nav className="bottom-nav" aria-label="Navegación principal">

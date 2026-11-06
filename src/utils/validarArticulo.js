@@ -1,12 +1,17 @@
+import { textoValido, textoProductoValido } from './texto.js'
+
 export function validarArticulo(campos) {
   const errores = {}
-  for (const [campo, mensaje] of [
-    ['nombre', 'Ingresa el nombre del artículo.'],
-    ['marca', 'Ingresa la marca del artículo.'],
-    ['tipo', 'Ingresa la categoría del artículo.'],
+  for (const [campo, mensaje, etiqueta] of [
+    ['nombre', 'Ingresa el nombre del artículo.', 'nombre'],
+    ['marca', 'Ingresa la marca del artículo.', 'marca'],
+    ['tipo', 'Ingresa la categoría del artículo.', 'categoría'],
   ]) {
-    if (typeof campos?.[campo] !== 'string' || !campos[campo].trim()) {
+    if (!textoValido(campos?.[campo])) {
       errores[campo] = mensaje
+    } else if (!textoProductoValido(campos[campo])) {
+      errores[campo] =
+        `Formato de ${etiqueta} no válido. Usa letras, números o símbolos comerciales permitidos, sin saltos de línea ni caracteres invisibles.`
     }
   }
   for (const [campo, etiqueta] of [

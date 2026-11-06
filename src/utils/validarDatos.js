@@ -1,6 +1,4 @@
-function textoValido(valor) {
-  return typeof valor === 'string' && valor.trim().length > 0
-}
+import { textoValido, textoProductoValido } from './texto.js'
 
 export function validarProductos(datos) {
   if (!Array.isArray(datos)) return false
@@ -8,8 +6,9 @@ export function validarProductos(datos) {
   return datos.every((producto) => {
     if (
       !producto ||
-      !['id', 'nombre', 'categoria'].every((campo) =>
-        textoValido(producto[campo]),
+      !textoValido(producto.id) ||
+      !['nombre', 'categoria'].every((campo) =>
+        textoProductoValido(producto[campo]),
       ) ||
       !Number.isSafeInteger(producto.precio) ||
       producto.precio < 0 ||
